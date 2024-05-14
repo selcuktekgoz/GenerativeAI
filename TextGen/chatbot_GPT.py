@@ -17,7 +17,16 @@ if "messages" not in st.session_state:
     )
 
 
-def generate_response(prompt):
+def generate_response(prompt: str) -> str:
+    """
+    Generates a response from the specified model based on the given prompt.
+
+    Parameters:
+    prompt (str): The input prompt to generate a response for.
+
+    Returns:
+    str: The generated response text from the model.
+    """
 
     response = client.chat.completions.create(
         model="gpt-3.5-turbo-0125",
@@ -29,8 +38,8 @@ def generate_response(prompt):
     return response.choices[0].message.content
 
 
-### Streamlit Arayüzü ###
-st.header("TextGen Chat Bot")
+### Streamlit Interface ###
+st.header("TextGen Chat Bot [Gpt 3.5 Turbo]")
 st.divider()
 
 
@@ -40,7 +49,8 @@ for message in st.session_state.messages[1:]:
 
 if prompt := st.chat_input("Mesajınız"):
     st.session_state.messages.append({"role": "user", "content": prompt})
-    st.chat_message("user").markdown(prompt)
+    with st.chat_message("user"):
+        st.markdown(prompt)
 
     response = generate_response(prompt)
     st.session_state.messages.append({"role": "assistant", "content": response})
