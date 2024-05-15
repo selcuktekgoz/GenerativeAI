@@ -1,7 +1,7 @@
 from os import getenv
 from dotenv import load_dotenv
 import streamlit as st
-from anthropic import Anthropic
+
 
 load_dotenv()
 
