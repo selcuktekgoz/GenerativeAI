@@ -5,7 +5,7 @@ import streamlit as st
 path = "GenerativeAI/TextGen/.env"
 load_dotenv(dotenv_path=path, verbose=True)
 
-# if not working, go to terminal and paste below
+# If it doesn't work, go to terminal and paste the following.
 # export REPLICATE_API_TOKEN=<paste-your-token-here>
 
 system_prompt = "Sen Büyük Dil Modelleri konusunda bir uzmansın."
