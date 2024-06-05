@@ -24,7 +24,7 @@ def video_to_srt(video_file_name):
 ####### Streamlit Interface #######
 
 st.set_page_config(
-    page_title="Video İçerik Tespiti", page_icon=":robot_face:", layout="centered"
+    page_title="Video Content Detection", page_icon=":robot_face:", layout="centered"
 )
 
 st.header("Video to Text [AssemblyAI]")
