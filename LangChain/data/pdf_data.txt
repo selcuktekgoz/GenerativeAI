@@ -1,0 +1,1147 @@
+ 
+            
+T.C. SAĞLIK BĠLĠMLERĠ ÜNĠVERSĠTESĠ  
+ANKARA DIġKAPI YILDIRIM BEYAZIT  
+SAĞLIK UYGULAMA VE ARAġTIRMA MERKEZĠ  
+AĠLE HEKĠMLĠĞĠ KLĠNĠĞĠ  
+ 
+ 
+ 
+ 
+ 
+TAM KAN PARAMETRELERĠNE GÖRE TALASEMĠ 
+ĠLE DEMĠR EKSĠKLĠ ĞĠ ANEMĠSĠ TANISINDA 
+YAPAY ZEKA KULLANIMI  
+ 
+ 
+ 
+ 
+Dr. Furkan KORKMAZ  
+ 
+ 
+ 
+ 
+TIPTA UZMANLIK TEZĠ  
+ 
+ 
+ 
+ 
+ 
+ANKARA/2022  
+ 
+            
+T.C. SAĞLIK BĠLĠMLERĠ ÜNĠVERSĠTESĠ  
+ANKARA DIġKAPI YILDIRIM BEYAZIT  
+SAĞLIK UYGULAMA VE ARAġTIRMA MERKEZĠ  
+AĠLE HEKĠMLĠĞĠ KLĠNĠĞĠ  
+ 
+ 
+ 
+ 
+ 
+TAM KAN PARAMETRELERĠNE GÖRE TALASEMĠ 
+ĠLE DEMĠR EKSĠKLĠĞĠ ANE MĠSĠ TANISINDA 
+YAPAY ZEKA KULLANIMI  
+ 
+ 
+ 
+Dr. Furkan KORKMAZ  
+ 
+ 
+ 
+Tez DanıĢmanı: Prof. Dr. Cenk AYPAK  
+ 
+ 
+ 
+TIPTA UZMANLIK TEZĠ  
+ 
+ 
+ 
+ 
+ANKARA/2022 
+i TEġEKKÜR  
+Uzmanlık eğitimim süresince ve tez yazım sürecinde bilgi birikimi ve engin 
+deneyimlerini paylaĢan ve destekler ini hiçbir zaman esirgemeyen saygıdeğer hocam 
+ve tez danıĢmanım Prof. Dr. Cenk AYPAK‟a, bilgisi ve tecrübeleri ile her zaman 
+yanımda olan çok değerli hocamız Prof. Dr. Süleyman GÖRPELĠOĞLU‟na , 
+Birlikte çalıĢmaktan mutluluk duyduğum çok sevgili asistan dokt or 
+arkadaĢlarıma,  
+Daima yanımda ve en büyük destekçim olan, bana inanan ve güvenen çok 
+sevdiğim canım annem Çiğdem KORKMAZ ve babam Seyfullah KORKMAZ‟a,  
+ 
+Sonsuz Teşekkürlerimle…  
+ 
+Dr. Furkan KORKMAZ  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  ii ĠÇĠNDEKĠLER  
+TEġEKKÜR  ................................ ................................ ................................ .................  i 
+ĠÇĠNDEKĠLER  ................................ ................................ ................................ ...........  ii 
+KISALTMALAR VE SĠMGELER  ................................ ................................ ............  iv 
+TABLO LĠSTESĠ  ................................ ................................ ................................ ........  v 
+ġEKĠL LĠSTESĠ  ................................ ................................ ................................ .........  vi 
+ÖZET ................................ ................................ ................................ .........................  vii 
+ABSTRACT  ................................ ................................ ................................ ...............  ix 
+1.  GĠRĠġ VE AMAÇ  ................................ ................................ ................................ .. 1 
+2.  GENEL BĠLGĠLER  ................................ ................................ ...............................  2 
+2.1.  YAPAY ZEKA  ................................ ................................ .............................  2 
+2.1.1.  Yapay Zeka ÇeĢitleri  ................................ ................................ ........  3 
+2.1.1.1.  Yapay Sinir Ağları (YSA)  ................................ .................  3 
+2.1.1.2.  Uzman Sistemler (Expert Systems)  ................................ ... 5 
+2.1.1.3.  Bulanık mantık (Fuzzy Logic)  ................................ ...........  5 
+2.1.1.4.  Sinirsel bulanık sistemler  ................................ ...................  5 
+2.1.1.5.  Genetik Algoritma  ................................ .............................  5 
+2.1.1.6.  Karar ağaçları (Decision Trees)  ................................ .........  6 
+2.1.2.  Yapay Zeka ve Etik  ................................ ................................ ..........  6 
+2.2.  ANEMĠ  ................................ ................................ ................................ ..........  6 
+2.2.1.  Anemilerin Sınıflandırılması  ................................ ............................  7 
+2.1.2.  Demir Eksikliği Anemisi  ................................ ................................ .. 8 
+2.3.  HEMOTOPOEZ  ................................ ................................ ..........................  10 
+2.3.1.  Anormal Hemoglobinler (Hemoglobinopatiler)  .............................  10 
+2.3.1.1.  Talasemiler  ................................ ................................ ....... 11 
+2.3.1.2.  Alfa Talasemi  ................................ ................................ ... 12 
+2.3.1.3.  Beta Talasemi  ................................ ................................ .. 13 
+3.  GEREÇ VE YÖNTEM  ................................ ................................ ........................  16 
+3.1.  ARAġTIRMANIN TĠPĠ  ................................ ................................ ..............  16 
+3.2.  ARAġTIRMANIN YERĠ, ZAMANI VE ETĠK KURUL ONAYI  .............  16 
+3.3.  ÇALIġMAYA KABUL VE RED KRĠTERLERĠ  ................................ ...... 16 iii 3.4.  ARAġTIRMA SÜREÇLERĠ  ................................ ................................ ...... 16 
+4.  BULGULAR  ................................ ................................ ................................ ........  19 
+5.  TARTIġMA  ................................ ................................ ................................ .........  29 
+6.  SONUÇ  ................................ ................................ ................................ ................  31 
+7.  KAYNAKLAR  ................................ ................................ ................................ .... 32 
+8.  EKLER  ................................ ................................ ................................ .................  36 
+Ek-1: TEZ KONUSU ONAY FORMU  ................................ ..............................  36 
+Ek-2: ETĠK KURUL ONAY FORMU  ................................ ................................  38 
+9.  ÖZGEÇMĠġ  ................................ ................................ ................................ .........  39 
+ 
+ 
+ 
+  iv KISALTMALAR VE SĠMGELER  
+ANN  : Artificial Noral Network  
+CBC  : Complete Blood Count  
+DEA  : Demir  eksikliği  anemisi  
+HGB  : Hemoglobin  
+IDA 
+MCV  
+HGB  
+MCH  
+MCHC  
+RDW  
+RBC  
+DNA  
+IRIDA  
+CEP 
+EPP  
+ICD : Iron  Deficiency  Anemia  
+: Mean  Corpuscular Volume  
+: Hemogoblin  
+: Mean  Corpuscular Hemoglobin  
+: Mean  Corpuscular Hemoglobin Concentration  
+: Red Cell Distribution Width  
+: Red Blood Cell  
+: Deoksiribo  Nükleik Asit  
+: Iron -Refractory  Iron DeficiencyA  nemia  
+: Konjenital  Eritropoetik Porfiri  
+: Eritropoetik  Protoporfiri  
+: International Classification of Disease  
+YSA  : Yapay Sinir Ağı  
+ 
+ 
+ 
+ 
+  v TABLO LĠSTESĠ  
+Tablo 1:  Eritrosit morfolojisine göre anemi sınıflaması  ................................ .........  8 
+Tablo 2:  Demir eksikliği/ demir eksikliği a nemisinin ana sebepleri  .......................  9 
+Tablo 3.  Hemoglobinopatilerin sınıflandırılması  ................................ ..................  11 
+Tablo 4:  Hata  matrisi  ................................ ................................ .............................  17 
+Tablo 5:  YSA eğitim ve test iĢlemleri için kullanılan veri seti bilgileri  ...............  19 
+Tablo 6:  Ġki gizli katman içeren YSA için eğitim ve test sonrasında elde 
+edilen hatalar  ................................ ................................ ...........................  20 
+Tablo 7:  DEA için YSA tahmin değerlendirmesi  ................................ .................  21 
+Tablo 8:  Talasemi için YSA tahmin değerlendirmesi  ................................ ...........  22 
+Tablo 9:  Normal CBC için YSA tahmin değerlendirmesi  ................................ .... 22 
+Tablo 10:  Ġki gizli katman içeren  YSA için farklı eğitim algoritmalarının 
+performans karĢılaĢtırması  ................................ ................................ ...... 23 
+Tablo 11.  LM algoritması  ile eğitilen en iyi ysa yapılarının karĢılaĢtırması ...........  23 
+Tablo 12:  DEA test veri setleri için istatistiki değerler  ................................ ...........  27 
+Tablo 13:  Talasemi  test veri setleri için istatistiki değerler ................................ ..... 28 
+Tablo 14:  Normal  tam kan test veri setleri için istatistiki değer ler .........................  28 
+ 
+ 
+ 
+ 
+ 
+  vi ġEKĠL LĠSTESĠ  
+ġekil 1:  Yapay sinir ağı mimarisi örneği  ................................ ................................ . 4 
+ġekil 2:  Uzman sistemlerin genel yap ısı ................................ ................................ . 5 
+ġekil 3:  Gizli katmanlarında en az nöron sayısı ile en iyi sonuç veren 
+YSA yapısı  ................................ ................................ ...............................  20 
+ġekil 4:  Ġki gizli katman içeren YSA ile  elde edilen sonuçlar  ..............................  21 
+ġekil 5:  Test veri setindeki MCV istatistikleri  ................................ ......................  24 
+ġekil 6:  Test veri setindeki MCHC istatistikleri  ................................ ...................  24 
+ġekil 7:  Test veri setindeki HCT istatistikleri  ................................ .......................  25 
+ġekil 8:  Test veri setindeki RBC istatistikleri  ................................ .......................  25 
+ġekil 9:  Test veri setindeki RDW istatistikleri  ................................ ......................  26 
+ġekil 10:  Test veri setindeki MHC istatistikleri  ................................ ......................  26 
+ġekil 11:  Test veri setindeki HGB istatistikleri  ................................ .......................  27 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  vii ÖZET  
+GiriĢ ve Amaç : Günümüzde yapay zeka her alanı olduğu gibi tıp alanını da 
+etkilemeye baĢlamıĢtır.  
+Tıpta yapay zeka ilk olarak 2000‟li yıllarda kullanılmaya ba ĢlanmıĢtır. 
+Özellikle de en fazla tanı, tedavi iĢlemleri ve robotik uygulama alanlarında yarar 
+sağlanmıĢtır.  
+Dünya nüfusunun zaman geçtikçe artması ve yaĢlanması gibi problemlerin 
+yanında, bunun bir sonucu olarak doktor açığının artması da göze alındığında  
+doktorların daha hızlı ve doğru karar vermesine yardımcı sistemler kullanarak 
+kazanılan her saniye pek çok insanın sağlığına kavuĢmasına yardımcı olacaktır.  
+Tüm anemi sebepleri içinde Demir eksikliği anemisi %62,5 gibi büyük bir 
+oranı oluĢturmaktadır. Ta lasemi taĢıyıcılığı ise tüm anemi sebepleri içinde %5,4lük 
+bir oran ile  aneminin en sık 2. sebebini oluĢturmaktadır. Bundan dolayı talasemi 
+minör ile demir eksikliği anemisi tanısının konulması ve ayrımının yapılması önem 
+taĢımaktadır.  
+Gereç ve Yöntemler : Yapay zeka eğitim ve sınama veri setleri oluĢturmak 
+için 542 adet demir eksikliği tam kan verisi, 552 adet talasemi t am kan verisi ve 3192 
+adet normal aralıktaki tam kan verisi olmak üzere toplamda 4286 ad et tam kan verisi 
+kullanıldı . 
+Bu veriler daha sonra randomize edilerek homojen bir veri seti oluĢturuldu. 
+Daha sonra bu veri %75e %25 Ģeklinde ikiye ayrıldı. %75‟lik kı smı “yapay zeka 
+eğitim seti” olarak, diğer %25‟lik kısmı “yapay zeka sınama seti” olarak kullanıldı. 
+OluĢturduğumuz yapay zek a modelimiz, eğitildikten sonra , eğitimde 
+kullanmadığımı z diğer %25‟lik “yapay zeka sınama  seti” ile sınandı. Bu sınamada 
+yapay zek a modelinin baĢarı oranı Özgüllük  (specificity) , Duyarlılık (recall, 
+sensitivite), kesinlik skoru (precision) ve F1 skoru değerleri ile ortaya konuldu.  
+Bulgular: Ġki gizli katmandan oluĢan YSA, test setinde yer alan 135 adet 
+DEA tam kan verisinin tamamını DEA olarak tanımlayabilmiĢtir. 138 adet talasemi 
+tam kan verisinin ise 135 adetini  talasemi olarak tanımlayabilmiĢtir. Dolayısıyla ilgili viii YSA, gerçekte talasemi olmasına karĢın DEA olarak 3 adet yanlıĢ tahminde 
+bulunmuĢtur.  
+Sonuç: Ġstatistiksel verilerle o rtaya konulduğu üzere yapay zeka ile talasemi 
+ve DEA tanısı koymada umut vadeden sonuçlara ulaĢılmıĢtır. Yapay zeka 
+modellerinin klinisyenlerin daha hızlı karar vermelerine yardımcı olarak iĢ yükünü 
+azaltabileceği gösterilmiĢtir.  
+ 
+Anahtar kelimeler: Yapay zeka, yapay sinir ağları, anemi, demir eksiklği, talasemi  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  ix ABSTRACT  
+Introduction and Aim:  Artificial intelligence (AI) has begun to affect the 
+field of medicine as every field, nowadays.  
+Artificial intelligence in medicine has been used in 2000s, firstly. In 
+particular, the most benefit has been achieved in the fields of diagnosis, treatment 
+procedures and robotic applications.  
+In addition to problems such as the increasing and aging of the world 
+population by the time, considering the incre ase in the shortage of doctors as a result 
+of this, every second saved by using systems that help doctors to make faster and 
+more accurate decisions will help many people to regain their health.  
+Iron deficiency anemia constitutes a large proportion of 62.5 % among all the 
+causes of anemia. Thalassemia minor is the second most common cause of anemia 
+with a rate of 5.4%. Therefore, it is important to diagnose thalassemia minor and iron 
+deficiency anemia and  to make a distinct between them.  
+Materials and Methods : A total of 4286 CBC data, including 542 iron 
+deficiency CBC data, 552 thalassemia CBC data, and 3192 normal range CBC data  
+have been used to create artificial intelligence training and testing datasets.  
+After that, these data have been randomized to creat e a homogeneous data set. 
+Then, this data have been divided into 75% and 25%. 75% and the other 25% parts 
+of these data have been used as "artificial intelligence training set" and "artificial 
+intelligence test set", respectively. After the  training of the artificial intelligence 
+model, it has been tested with the "artificial intelligence test set"  which has not been 
+used to train before. The success rate of the artificial intelligence model for the test 
+was determined by using specificity, sensitivity, preci sion and F1 score values.  
+Results:  The Artificial Neural Network (ANN) model with two hidden layers  
+has been able to identify all 135 IDA whole blood data as IDA within the test set. It 
+has been able to define 135 of 138 thalassemia CBC data as thalassemia.  In other 
+words, the ANN model  has made only 3 wrong predictions.  x Conclusion:  As demonstrated by statistical data, promising results have been 
+achieved in diagnosing thalassemia and IDA with artificial intelligence. It has been 
+shown that AI models can be used to reduce the workload of clinicians to make faster 
+decisionsby helping.  
+ 
+Keywords:  Artificial intelligence, artificial neural networks, anemia, iron deficiency, 
+thalassemia  1 1. GĠRĠġ VE AMAÇ  
+Günümüzde yapay zeka her alanı olduğu gibi tıp alanını ve d oktorları da 
+etkilemeye baĢlamıĢtır.  
+Yapay zeka ilk olarak 2000‟li yıllardan itibaren tıpta kullanılmaya 
+baĢlanmıĢtır. Sağlık hizmetlerinde ise en fazla yarar sağlanan alanlar ise tanı, tedavi 
+iĢlemleri ve robotik uygulamalardır  (1). 
+Dünya nüfusunun zaman geçtikçe artması ve yaĢlanması gibi problemlerin 
+yanında, bunun bir sonucu olarak doktor açığının artması da göze alındığ ında 
+doktorların daha hızlı ve doğru karar vermesine yardımcı sistemler kullanarak 
+kazanılan her saniye pek çok insanın sağlığına kavuĢmasına yardımcı olacaktır  (2). 
+Ayrıca modern tıp geliĢmeye devam ettikçe büyük miktarda ve ri 
+oluĢmaktadır. Bu büyük miktardaki veriyi iĢlemek ve bu veriye hakim olmak 
+günümüz doktorları üzerinde büyük bir yük de oluĢturmaktadır.  
+Bu tez çalıĢması ile amaç, geliĢtirdiğimiz yapay zeka algoritmasının tam kan 
+parametreleri  ile oluĢturduğumuz veri se tleri üzerinde tanı koyma performansına 
+spesifite (özgüllük) , sensitivite (duyarlılık), precision(kesinlik)  oranları  ve F1 skoru  
+çerçevesinde bakmaktır.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2 2. GENEL BĠLGĠLER  
+2.1. YAPAY ZEKA  
+Yapay zeka , bir makinenin  zekâsı ile yapılabilen;  akıl yürütme,  öğrenme ve 
+uyarlama, hatırlama ve değerlendirme, duyusal anlayıĢ ve etkileĢim gibi insan 
+davranıĢları nı taklit edebilme  yeteneği olarak tanımlanmaktadır (3,4) . 
+Bir terim olarak "yapay zeka” ise ilk olarak 1956 yılında Minsky ve 
+McCarthy tarafından kullanılmıĢtır  (5). 
+Yapay zeka yöntemlerinin  tıbbi yayınlarda  kullanımını değerlendirmek 
+amacıyla PubMed veri tabanı nda yaptığımız araĢtırmada  makale sayısının yıll ara 
+göre arttığı gözlenmektedir (6). Pubm ed‟de “artificial  intelligence” kelimeleri ile 
+18.06.2022  tarihinde yaptığımız aramada 154,288 makale bulunmaktadır.  
+Ġlk yıllarda kardiyoloji ala nında yapılan çalıĢmalarda baĢarılı sonuçlar 
+alınmasının ardından radyoloji ve diğer tıp alanlarında da çalıĢmalar yapılmaya 
+baĢlanmıĢtır.  
+Yapay zeka, sağlık sektöründe ilk olarak tanı -karar destek sistemi olarak 
+geliĢmiĢ ülkelerin sağlık sisteminde kullan ılmak üzere tanıtılmıĢtır. Klinik iĢlemlerde 
+verimliliği, doğruluğu ve so nucu iyileĢtirmek amaçlanmıĢtır (7). 
+Her ne kadar yakın gelecekte robot doktorlar yaĢam ımızda yer alacak gibi 
+görünmese de, tıpta yapay zeka;  sağlık kayıtlarının elektronik olarak tutulmasında, 
+tanı-tedavi protokolü geliĢtirilmesinde, hasta izlemi ve bakımında, kiĢiselleĢtirilmiĢ 
+tıp, robotik cerrahi ve sağlık sistemi yönetimi alanlarında et kili bir  Ģekilde 
+kullanılacaktır (8,9) . 
+Makine öğrenme, karmaĢık sistemler, bulanık mantık, karar ağacı, genetik 
+algoritmalar ve yapay sinir ağları çeĢitli yapay zeka çeĢitlerine örnek olarak 
+gösterilebilir.  
+ 3 2.1.1. Yapay Zeka ÇeĢitleri  
+2.1.1.1. Yapay Sinir Ağları (YSA)  
+Yapay sinir ağları (YSA),  insan beynindeki nöronların çalıĢma 
+prensiplerinden esinlenilerek tasarlanmıĢtır  (ġekil 1).  
+Yapay sinir ağları; sinir hücreleri ve aralarındaki iliĢki örnek alınarak 
+geliĢtirilmiĢtir. Asıl amacı, aynı insan beyni gibi öğrenmek olan bir yapay zeka 
+teknoloj isi çeĢididir. Sinir hücresi topluluklarına benzer çeĢitli katmanlar, farklı 
+Ģekillerde birbirine bağlanır ve yapay bir sinir ağı oluĢturur. Modelin öğrenme 
+özelliği sayesinde her katmana farklı ağırlıklar atanır. Model öğrenme evresini 
+tamamlandığında gir ilen veriden tahminleme yaparak çıktı oluĢturma becerisine 
+sahip olur. Yani diğer bir deyiĢle bu model hem öğrenme hem de tahminleme 
+yetisine sahiptir . 
+Bir yapay sinir ağı basitçe üç ana katmandan oluĢur. Bunlar  girdi katmanı, ara 
+katman ve ç ıktı katmanı dır (10). 
+Bazı kaynaklarda ara katman gizli katman olarak da geçebilmektedir. 
+Modelde iĢlenecek veri ilk olarak gird i katmanından alınır. Bu veri daha sonra ara 
+katmana iletilir. Tasarlanan modele göre ara katman sayısı değiĢiklik gösterebilir. 
+Esas olarak ağırlık katsayısı verilen katmanlar bu ara katmanlardır . 
+Ġstenen sonuç ise ara katmandan gelen verilerin çıktı katm anında iĢlenmesi ile 
+verilir. Modelde ara katmanlara verilen ağırlık katsayısı ilk olarak rastgele atanır. 
+Model tasarlanırken kullanılan eğitim veri seti, etiketlenmiĢ verilerdir . Yani giriĢ 
+katmanına giren verinin sonuçları bellidir. Eğitilen model eldek i sonuçlarla aynı 
+sonuçlara ulaĢmak için verileri iĢlediği ara katmanların ağırlık katsayısını 
+hesaplayarak kendi kendisini Ģekillendirir; yani öğrenir. Model öğrendiğinde yani 
+modelin ulaĢtığı sonuçlar ile önceden bizim etiketlediğimiz sonuçlar aynı olduğ unda 
+modelin gerçekten çalıĢıp çalıĢmadığının sınanması gerekir. Bu sınama iĢlemi ise 
+daha önceden eği tim setinde kullanılmayan veri lerle yapılır. Sınamada baĢarılı 
+sonuçlara ulaĢıyorsa yapay sinir ağı kullanılmaya hazırdır.  4  
+ġekil 1: Yapay sinir ağı mima risi örneği  
+Yapay sinir ağları, tasarımı itibariyle bilgi iĢleme yeteneği yönünden güçlü 
+bir yapay zeka türüdür. Bu Ģekilde basite indirgenmiĢ Ģekilde anlatılsa da aslında 
+yapay sinir ağları oldukça karmaĢık sistemlerdir. Çünkü bu türde büyük veri 
+grupları nı iĢlemek için sadece bir “nöron” yeterli olmamaktadır . Daha fazla sayıda 
+nöron kullanılarak paralel hesaplama yapılır ve böylece ağırlık katsayısı belirlenerek 
+çıktı oluĢturulur. Yapay sinir ağları bir kere eğitilmeye baĢlandıktan sonra modelin 
+çalıĢma y önüne göre ileri beslemeli veya geri beslemeli olarak kullanılabilirler ve 
+spesifik bir problem çözümü için eğitilebilirler. Yapay sinir ağları istenen sonuçlara 
+doğru Ģekilde ulaĢılana kadar tekrar tekrar eğitilme özelliğine sahiptir . Yalnız 
+overfitting o larak biline n aĢırı öğrenme oluĢmamasına dikkat edilmelidir. Overfitting 
+oluĢan modeller yorum yapmaktan çok eğitim setindeki verilerin ezberciliğine 
+dönüĢür.  
+Doktorlar hastalardan elde ettikleri bilgilere bilinçaltında farklı önem sırası 
+belirleyerek kara rlarını verirler. Tecrübeli doktorlar genellikle yeni baĢlayan 
+doktorlardan daha sık doğru sonuçlara ulaĢırlar, bunun nedeni meslekte harcadıkları 
+süre boyunca birçok farklı durumla karĢılaĢmıĢlar ve bunları öğrenmiĢlerdir. Yapay 
+zekanın tıpta kullanılması yla elde edilen en önemli kazanımlardan biri bu “bölüm 
+hafızasının” kalıcı hale getirilmesidir  (11). 
+Yapay sinir ağları, günümüzde optik karakter tanıma, ses tanıma, veri 
+madenciliği ve veri filtreleme gibi çeĢitli alanlarda da kullanılmaktadır . 
+5 2.1.1.2.  Uzman Sistemler (Expert  Systems)  
+Uzman sistemle r, bir konudaki uzman kiĢilerin ver diği kararları ve ka rar 
+verme biçimlerini modelleyebilen ve onları belli oranlarda taklit edebilen 
+sistemlerdir.  
+Tıbbi uzman sistemler alanında uzman kiĢilerce oluĢturulur ve farklı 
+görüĢlerle daha doğru kararlar vermesi sağlanır. Ancak tıbbi uzman sistemlerin 
+amacı hekimin y erini almak değil kendi bünyesinde barındırdığı farklı görüĢler ve 
+bilgiler ile gerçek bir hekime önerilerde bulunmaktır  (12). 
+ 
+ġekil 2 : Uzman sistemlerin genel yapısı  
+2.1.1.3.  Bulanık mantık (Fuzzy  Logic)  
+Bulanık mantık  her önerme için net bir Ģekilde “doğrudur” ya  da “ yanlıĢtır” 
+önermesinin yapılamadığı ya da yapılmadığı , her Ģeyin 1 ya da 0 olacak Ģekil de 
+keskin sınırlarla ayrılmadığı borderline durumların da olduğu durumlarda kullanılır.  
+Tıbbi kavramların çoğu bulanık kavramlar sınıfına girdiğinden dolayı tıbbi kavramlar 
+ve aralarındaki iliĢkiler de bulanık mantık yöntemiyle gösterilebilir . 
+2.1.1.4.  Sinirsel bulanık sistemler  
+Yapay sinir ağla rı ile sinirsel bulanık sistemle rin birleĢimidir.  
+2.1.1.5.  Genetik Algoritma  
+Yeni geliĢmeye baĢlayan bir yapay zeka dalıdır. Doğadan esinlenerek 
+evrimsel sürece benzer Ģekilde  iyi olanın hayatta kalmasına prensibine d ayanır.  
+6 2.1.1.6.  Karar ağaçları (Decision  Trees)  
+Karar ağaçları yapay zeka modelinde önceden belirlediğimiz parametreler ve 
+sonuçlar arasında belli bir iliĢki kurarak tahmin algoritması oluĢturur. Ancak bur ada 
+bilgi sunulurken ağaç dalları gibi dallanarak basamak basamak sunulur. Genel olarak 
+karar basamağı, olasılık basamağı ve sonuç basamağı olmak üzere 3 basamak vardır.  
+2.1.2. Yapay Zeka ve Etik  
+Yapay zeka ciddi faydalar  sağlasa da dikkat edi lmesi ve farkında olunması 
+gereken problemlere de neden olma ih timali vardır  (13). 
+Yapay zekanın baĢlıca yol açabileceği tıbbi etik problemler aĢağıdaki 
+baĢlıklardaki  gibi listelenebilir  (4). 
+ Yapay zekanın hata yapma potansiyeli  
+ Yapay zeka ile verilen kararlarda hatada sorumluluğunun kim/kimlere ait olacağı  
+ Yapay ze ka çıktılarının geçerliliğinin  sorunlar  
+ Yapay zeka sistemlerini n eğitim veriler inin yanlılık ve önyargılı yaklaĢımlar  
+içermesi riski  
+ Hassas verilerin güvenliğini ve gizliliğini sağlamak  
+ Yapay zeka teknolojisinin geliĢtirilmesinde ve kullanımında topl umsal güveni 
+sağlamak  
+ Sağlık bakımında insan onurunu koruma ve sosyal izolasyon konusundaki 
+sorunlar  
+ Sağlık çalıĢanlarının rolleri ve becerileri üzerindeki etkileri  
+ Yapay zekanın  kötü amaçlar için kullanılma potansiyeli  
+2.2. ANEMĠ  
+Anemi aynı yaĢ, cinsiyet ve ırktaki insanların ortalama hemoglobin 
+değerlerinin 2 standart sapma altında olmasıdır. Dünya Sağlık Örgütü‟ne göre 
+hemoglobinin erkeklerde 13 gr/dl, kadınlarda 12 gr/dl altında olması uzun süredir 7 anemi olarak kabul edilmektedir. Ancak bu  değerler kaba ca belirlenmiĢ olup yaĢ, ırk 
+ve cinsiyete bağlı normal değerlerin 2 standart sapma altını temsil etmemektedir  (14). 
+Bu nedenle Ģimdiye kadar aneminin farklı tanımları yapılmıĢ olup hemoglobin alt 
+sınırı erkekler için 13 gr/dl‟den 14.2 gr/dl‟ye, kadınlar için 11.6 gr/dl‟den 12.3 
+gr/dl‟ye kadar değiĢmekted ir (15). 
+Demir eksikliği anemisi tüm anemi sebeple rinin 62,5%‟ini o luĢturmaktadır. 
+Talasemi taĢıyıcılığı tüm anemi sebepleri içinde aneminin en sık 2. sebebi olup, tüm 
+anemi vakalarının 5,4%‟ünü oluĢturmaktadır  (16). Bundan dolayı beta talasemi 
+minörün demir eksikliği anemisinden ayrımının yapılması önem taĢımaktadır.  
+2.2.1. Anemilerin Sınıflandırılması  
+Anemiler sınıflandırılırken MCV değerinden yararlanılır. MCV<80 fl olması 
+mikrositer anemilere, MCV>100 fl olması ma krositer anemilere, MCV 80 -100 fl 
+olması normositer anemilere iĢaret eder.  Alfa ya da beta globülin sentezindeki 
+genetik defektler, demir eksikliği, hem sentezinin kalıtsal ya da edinsel olarak 
+etkilenmesi mikrositer anemilerle neden olur  (17). 
+DNA sentezinde kullan ılan timin sentezinde k ofaktör olarak folik asit 
+kullanılır. B12 vitamini ise folik  asitin timin sentezinde aktif forma dönmesinden 
+sorumludur. Folik asit eksikliğinde gerekli düzeyde DNA sentezi yapılamadığı için 
+hücre bölünmesi gereken zamanda yapılamaz. Hücre büyür ancak gere kli DNA 
+sentezi yapılamamıĢtır . Bu duruma Nükleositoplazmik  disosiasyon denir . Bundan 
+dolayı  folik asit eksikliği ile oluĢan anemi  mega loblastik  makrositer anemidir  (18). 
+Myelodisplastik Sendrom , karaciğer fonksiyon bozukluğu, alkolizm, 
+hipotiroidi ise nonmegaloblastik  makrositer anemi nedenlerindendir. Yine akut 
+hemoliz sırasında nonmegaloblastik  makrositer anemi görülür.  
+Kronik hastalık anemisi, akut kanama, renal hastalık anemisi ise normosite r 
+anemilere örmek verilebilir. Ayrıca demir eksikliği anemisi erken dönemde 
+normositer anemi yapabileceği gibi kronik hastalık anemisi de mikrositer anemiye 
+neden olabilir.  8 Tablo 1:  Eritrosit morfolojisine göre anemi sınıflaması  
+Mikrositer Anemiler  
+(MCV <8 0) Normositer Anemiler  
+(MCV 80 -100) Makrositer Anemiler  
+(MCV >100)  
+ Demir Eksikliği 
+Anemisi   Kronik Hastalık Anemisi   Vitamin B12 Eksikliği  
+ Talasemiler   Demir Eksikliği Anemisi 
+(Erken Dönem)   Folik Asit Eksikliği  
+ Kronik Hastalık 
+Anemisi   Akut Hemoraji   Hipotiroidizm  
+ Sideroblastik 
+Anemiler   Böbrek Yetmezliği   Karaciğer Hastalıkları  
+ Aseruloplazminemi   Kronik Hastalık Anemisi   Myelodisplastik 
+Sendrom  
+ IRIDA   Demir Eksikliği Anemisi 
+(Erken Dönem)   Akut Hemoliz  
+ Hipotransferrinemi   Akut Hemoraji   
+ CEP, EPP   Böbrek Yetmezliği   
+ 
+2.1.2 .Demir Eksikliği Anemisi  
+2016‟da yazılan bir  makaleye göre dünya nüfusunun 1,93 milyarı anemiktir. 
+Demir eksikliği anemisi tüm anemi sebeplerinin 62,5%‟ini oluĢturmaktadır. Dünya 
+genelinde 552 milyon erkek, 655 milyon kadın demir e ksikliği anemisine sahiptir  
+(16). Yeterli veri olmamakla birlikte demir eksikliğinin görülme sıklı ğı demir 
+eksikliği anemisinin en az 2 katı olduğu düĢünülmektedir  (19).Demir eksiliği anemisi 
+kognitif fonksiyonları n, yaĢam kalitesini n, iĢ üretkenliğini n düĢmesine neden 
+olmaktadır.  Ayrıca e rken çocukluk  döneminde  ve infantlarda ki kognitif 
+fonksiyonlarda  azalma irrevers ible olabilmektedir  (20). 
+Demirin vücutta atılması için kan kaybı dıĢında bir mekanizma olmamasına 
+rağmen sık görülmektedir. Olası demir emilim azlığı nedeni muhtemelen reaktif 
+oksijen radikallerinden ve ağır metal absorbsiyonundan korunmak için emilimin 
+sınırlandırılması olarak gö sterilmektedir. Vücutta d emir düzeyi  temel olarak 
+bağırsaklardan demir emilimi ile  denetlenir  (21,22) . 
+Demir eksikliğinin 3 ana nedeni demir alımında yetersizlik, bağırsaklarda 
+emilim bozukluğu ve kronik kan kaybı Ģeklinde gösterilebilir.  9 Tablo 2:  Demir eksikliği/ demir eksikliği anemisinin ana sebepleri (22–38) 
+ 
+ 
+ 
+ 
+10 2.3. HEMOTOPOEZ  
+Kan yapımı iĢlemi ne hematopoez ismi verilir . Eski Yunancada kan anlamına 
+gelen “haima” ile yapmak anlamına gelen “poiein” kelimelerinin bir araya 
+gelmesinden oluĢmuĢtur . Bir eriĢkin insan kemik iliğinde her gün ortalama  ̴ 5 x 10¹¹ 
+hücre üretilmektedir  (39). 
+Hematopoez  embriyonik yaĢamda ilk olarak yolk sac kes esinde baĢlarken, 
+sonrasında karaciğer ve dalakta sürdürülür. Ġkinici  trimesterda  hematopoezden  
+primer sorumlu organ karaciğerdir. 7. aydan itibaren hemotopezi kemik iliği üstlenir. 
+Doğumdan itibaren kan üretiminin neredeyse tamamı kemik iliğinde gerçekleĢ ir (39). 
+Embriyoda ilk üretilmeye baĢlanan  kan hücresi ç eĢidi eritrositlerdir. 
+Eritrositler ilk üretildiklerinde çap olarak büyük ve çekirdeklidirler. Daha sonra 
+çekirdeklerini kaybederler. Eritropoez kök hücrelerini primitif pluripotent  
+glikoprotein olan eritropoetin hormonu uyarır. Eritropoetin böbreklerin 
+jukstaglomerüler aparatında ve çok az miktarda karaciğer ve kemik iliğinde 
+üretilir  (40). 
+Eritrosit üretimi bir dizi seri hücre dönüĢüm basamağından oluĢur. Ġlk olarak 
+ana kök hücrelerden „bazofil eritroblastlar‟ oluĢur ve bu aĢamada Hb sentezi de 
+baĢlar. Hemo globin üretimi arttıkça eritrob lastlar bazofil özelliklerini kaybetmeye 
+baĢlar ve „pol ikromatofil‟ olurlar. Daha sonra çekirdekleri küçülmeye baĢlar ve 
+içeriğindeki he moglobinin daha da arttığı  „normoblast‟ ortaya çıkar. En sonunda ise 
+piknotik hale gelmiĢ olan çekirdek hücre dıĢına atılır. OluĢan genç eritrositlere 
+„retikülosit‟ denir. Retikülositler de 24 -72 saat içinde yaklaĢık 120 gün yaĢam 
+süreleri olan olgun eritrositler halini alır  (40). 
+2.3.1. Anormal Hemoglobinler (Hemoglobinopatiler)  
+Hemoglobinopatiler, hemoglobinin yapısal olarak bozukluğu ve dolayısıyla 
+fonksiyonel olarak da bozukluğunu içeren durumlardır. Bu bozukluklar g enel olarak 
+globin sentezinden sorumlu genetik bölgelerdeki kalıtsal hatalar nedeniyle oluĢur. 
+Ancak methemoglobinemiler gibi edinsel  hemoglobinopatiler de mevcuttur. 11 Hemoglobinopatilerin kliniği asemptomatik olmaktan ağır multisistem hastalık 
+Ģeklinde de bulgu vermeye kadar geniĢ bir spektrumda yayılır.  
+Tablo 3. Hemoglobinopatilerin sınıflandırılması (41) 
+Hemoglobinopatilerin S ınıflandırılması  
+Yapısal hemoglobinopatiler  
+Talasemi  sendromları  
+Talasemik  Hb varyantları  
+Herediter  Persista n HbF Sentezi  
+Edinsel  Hemoglobinopatiler  
+  
+2.3.1.1. Talasemiler  
+Dünyada demir eksikliğinden sonra aneminin en sık 2. nedeni talasemidir. En 
+sık görülen hemoglobinopati yine talasemi minördür  (16). Hemoglobinopatiler  Orta 
+Doğu, Türkiye‟nin de içinde bulunduğu Akdeniz bölgesi, Orta Afrika ve Güney Asya 
+toplumlarında daha çok görülür  (42). Genel olarak Türkiye‟de tüm beta ta lasemi sıklığı 
+% 2 olarak belirlenmiĢtir  (43). 
+Dünya nüfusunun%7 kadar ının Hb hastalıkları açısından taĢıyıcı olduğu ve her 
+yıl 300.000 -500.000 yeni doğanda bu hastalıkların çeĢitli formlarının görüldüğü tespit 
+edilmektedir. Beta talasemi hastalığı sebebiyle ise dünyada her yıl 50.000 - 100.000 
+çocuğun öldüğü bildirilmektedir  (44). 
+Talasemiler, globin sentezinde bozuklukla ve dolayıs ıyla yetersiz hemoglobin 
+üretimi ile sonuçlanan otozomal resesif kalıtılan ve çeĢitli genetik varyantı bulunan 
+sendromlardır  (45). Talasemi bir yaĢından küçük çocuklarda solukluk, dalak 
+büyümesi, geliĢme bozukluğu ile kendini gösterir. Daha sonraları ise yüz 
+kemiklerinde değiĢimlere, demir birikimine bağlı olarak multi organ bozukluklarına 
+neden olur  (46). Ġsimlendirmeleri sentezi bozulan globin zincirine göre yapılır. Alfa 
+zincir yapımındaki bozukluk α talasemi, β zincir yapımındaki bozukluk ise β 
+talasemi olarak adlandırılmaktadır.  
+ 12 Dünyadaki doğum hızındaki yükseliĢ, akraba evlilikleri, bu konuda evlilik 
+öncesi danıĢmanlık ve prenatal tanının yetersizliği, eğitim düzeyinde eksiklik 
+nedeniyle talasemili doğumlar henüz yeteri kadar azaltılamamıĢtır.  
+2.3.1.2. Alfa Talasemi  
+Ġnsan genomunda 16. Kromozom çiftinin her birinde 2 tane olmak üzere 
+toplam 4 adet α gl obin geni bulunur. Alfa talasemiler bu genlerde me ydana  gelen  
+delesyonlar sonucu oluĢur. Bu dört α globin geninden bir tanesi delesyona 
+uğradığında sessiz talasemi; iki α geni delesyona uğradığında α talasemi taĢıyıcılığı, 
+α talasemi minör yada α talasemi  trait; Üç α geni delesyona uğrarsa Hb H hastalığı, 
+dört α geninin tamamı delesyona uğrarsa HbBart‟s (hidropsfetalis) oluĢur  (47). 
+2.3.1.2.1. Sessiz alfa taĢıyıcılığı  
+En hafif olanıdır, genelde insidental olarak yakalanır.  Tanı sadece DNA 
+çalıĢmaları ya da in vitro hemoglobin zincir sentezi ile koyulabilir.  
+2.3.1.2.2. Alfa talasemi minör  
+Hafif anemi görülebilir, HbA2 normal yada düĢüktür. Tanı g enetik çalıĢmalar 
+ile koyulur.  
+2.3.1.2.3. Alfa talasemi  intermedia (Hb H)  
+Hastalarda anemi görülür ancak nadiren transfüzyon gerecek kadar ilerler, 
+splenomegali, sarılık, anormal eritrositler ve periferik yaymada Heinz cisimcikleri 
+görülmektedir.  
+2.3.1.2.4 . Alfa talasemi majör  
+ġiddetli anemi vardır ve intrauterin dönemde bile transfüzyon ihtiyacı ortaya 
+çıkar. Etkilenen olgularda α geni hiç bulunmadığı için fetal hemoglobin sentezi 
+yapılamaz ve maalesef bu nedenle hastalar intrauterin dönemde ya da doğumdan  kısa 
+süre sonra kaybedilirler.  13 2.3.1.3. Beta Talasemi  
+Her bir 11. Kromozom çiftinin üzerinde bir tane olmak üzere toplam iki adet 
+β globin geni bulunur. Bu iki genden birinde hata varsa  β talasemi minör (β talasemi  
+trait ya da β talasemi taĢıyıcılığı), ik isinde birden hata varsa  β talasemi majör (veya β 
+talasemi  intermedia) hastalığı oluĢur.  
+β talasemi  patofizyolojisinin temelinde beta globin zinciri üretimi aksarken 
+alfa globin zincir üretiminin devam etmesi ve bunun eritroid  prekürsörlerde 
+birikmesi yata r. Normalde beta globin/alfa globin zinciri oranı0,9 -1,1 iken beta 
+talaseminin ağır formlarında bu oran 0 -0,35 civarına kadar düĢebilmektedir. Ayrıca 
+üretilemeyen beta zincirleri yerine gama globin zinciri sentezlenir ve HbF üretilir. 
+Ancak üretilen alfa z incirlerinin tamamı gama globin zinciri ile bağlanamaz ve 
+ortamda alfa globin zinciri birikmeye baĢlar. Bu da hücre içinde oksidasyon ile 
+süperoksit ve hidrojen radikalleri gibi serbest oksijen radikalleri, methemoglobinler 
+ve hemikromlar oluĢmasına neden olur. Serbest alfa globin zincirleri tetramer yapısı 
+oluĢturamadığından kemik iliğinde kırmızı hücre prekürsörlerinde “Heinz body” 
+olarak adlandırılan inklüzyon cisimleri Ģeklinde çökerler. Bunlar Eritroit  
+prekürsörlerin  intramedüller yıkımından ve dolayıs ıyla beta talasemilerde geliĢen 
+yetersiz eritropoezden sorumludurlar. Tüm bu olaylar sonucunda geliĢen 
+inefektiferitropoez anemiye, eritropoetinin aĢırı üretimine ve kemik iliğinin aĢırı 
+geniĢlemesine yol açar. Eritropoetik kemik iliği aktivitesinin artmas ı; osteopeni, 
+osteoporoz, kemik hipertrofisi, yüz ve kafatası kemiklerinde deformiteler gibi iskelet  
+anomalilerinin temelinde yatar  (48). Karaciğer ve dalakta eritrosit yapımı devam 
+ettiği için hepatomegali ve splenomegali geliĢir.  
+Hemoglobin üretiminde aksama  sonucunda eritrositlerde  hipokromi, 
+mikrositoz ve anizositoz görülür.  Hemolitik anemiye bağlı polikromazi ve 
+poikilositoz, inefektif  eritropoeze bağlı periferik kanda normoblastlar ve 
+retikülositler izlenir  (49). 
+ 14 2.1.1.3.1. Sessiz beta talasemi taĢıyıcılığı  
+En hafif seyirlisidir, burdaki patoloji beta zincir sentezinin azalmasıdır. MCV 
+ve MCH değerleri normal aralıkta ya da az miktarda azalmıĢ olabilir. Hb A2 seviyesi 
+normal aralıktadır. Genellikle hafif mikrositoz  görülür . 
+2.1.1.3.2. Beta talasemi taĢıyıcılığı (Beta talasemi minör)  
+Ġki β globin geninden birinde β talasemi mutasyonu vardır. Eritrosit 
+Ģekillerinde belirgin anormallikler olmakla birlikte hasta larda çoğunlukla ciddibir 
+semptom yoktur veya hafif anemi ile karĢımıza çıkar. Genelde tesadüfen veya aile 
+taraması sırasında saptanır. Tam kan sayımı değerlendirmesi, periferik yaymanın 
+incelenmesi, eritrosit içindeki inklüzyon cisimciklerinin varlığı, Hb A2 ve HbF 
+düzeyindeki ar tıĢ tanıda esas parametrelerdir  (50). Hemoglobin düzeyi genelde 9 -11 
+g/dL, MCV ise 50 -70 fL aralığında olur. RBC sayısındaki artıĢ (>5.000.000/mm³) 
+karakteristiktir.  
+2.1.1.3.3. Beta talasemi  intermedia  
+Talasemi majör ile talasemi taĢıyıcılığı arasında kl inik seyirli olanları ifade 
+eder. Bu hastalarda eritroid  hiperplazi nedeniyle kemik iliği geniĢler, bunun 
+sonucunda iskelet deformiteleri oluĢur. Ayrıca transfüzyon ihtiyacı olmayan 
+olgularda bile bağırsaklardan artmıĢ demir emilimi sonucunda demir birikim i 
+görülebilir  (51). 
+Ortalama tanı yaĢı 2 - 4 yaĢtır. Hastalarda orta derecede hemolitik anemi, 
+hiperbilüribinemi ve hepatospl enomegali görülür.  
+Laboratuar değerleri ise  Hb 6 -10 g/dL düzeyinde, RDW yüksek, MCH, MCV 
+ve HTC değerleri düĢük iken Hb  elektroforezinde  HbA düĢük (%10 -20), HbF ise 
+yüksektir (%70 -80). 
+Hemolizi  provake eden durumlar (enfeksiyonların sebep olduğu hemolitik ya 
+da aplastik krizler), folik asit eksikliği, hipersplenizm gibi durumlarda anemi 
+derinleĢebilir ve kan transfüzyon ihitiyacı doğabilir.  
+ 15 2.1.1.3.4. Beta talasemi  major  
+En ağır klinik seyirli tiptir. Yenidoğan döneminde HbF‟in baskın olduğu ilk 3 
+aylık dö nemin bittiğinde semptom vermeye baĢlar. Çünkü bu dönemde γ gobin zincir 
+yapımının durdurulup β gobin zincir üretimine geçilmesi gerekirken üretilemediği 
+için problemler baĢlar. Hastalarda 6. hafta itibariyle hafif bir anemi ortaya çıkar ve 
+giderek belirgi nleĢir. Bir yaĢ civarında ise artık transfüzyon bağımlı olurlar.  
+Klinik bulgular çoğunlukla β globin zincirlerinin üretiminde problem olması 
+nedeniyle fazla olan α zincirlerinin birikmesiyle iliĢkilidir  (52). Hastalarda ilerleyen  
+dönemlerde büyüme ve geliĢmede geriliği , maksiller kemiklerin belirginleĢmesi ile 
+karakterize talasemik yüz görünümü oluĢur.  
+Laboratuar değerleri Ģöyledir; Hb 3 -7 g/dL arasında değiĢir. HCT , RBC, 
+MCV, MCH, ortalama eritrosit Hb  konsantrasyonu (MCHC) değer leri düĢük iken, 
+RDW düzeyi artmıĢtır . Kemik iliği aspirasyon incelemesinde ağır eritroid  hiperplazi, 
+periferik kan yaymasında ise anizositoz, poikilositoz, hipokromi ve mikrositoz 
+bulunur  (53). Hemoglobin elektroforezinde  HbF baskınlığı ve farklı seviyelerde 
+HbA 2 ve HbA değerleri görülür.  
+Beta talasemi  majör‟ün temel tedavisi kan transfüzyonudur.  Transfüzyon her 
+3 ila 5 haftada bir 10 -15 cc/kg  lökosit filtresi iĢlemi uygulanmıĢ,  subgrup uygun luğu 
+kontrol edilmiĢ  eritrosit ile yapılma ktadır. Bu tedavideki amaç dok u 
+oksijenizasyonunun bozulmasını engellemek  ve Hb  düzeylerininin  belli b ir seviyenin 
+üzerinde tutmaktır . 
+ 
+ 
+ 
+ 
+  16 3. GEREÇ VE YÖNTEM  
+3.1. ARAġTIRMANIN TĠPĠ  
+ÇalıĢmamız retrospektif, tanımlayıcı ve analitik bir çalıĢmadır.  
+3.2. ARAġTIRMANIN YERĠ, ZAMANI VE ETĠK  KURUL ONAYI  
+ÇalıĢma, DıĢkapı Yıldırım Beyazıt Eğitim AraĢtırma Hastanesine baĢvuran ve 
+sistemde D50 ve D51 ICD tanı kodları ve alt kırılımları ile Demir eksikliği anemisi  
+ve Talasemi tanısı iĢaretlenmiĢ hasta  kan tahlilleri ile verilerin gizliliğine dikka t 
+edilerek yapılmıĢtır.  ÇalıĢma için SBÜ DıĢkapı Yıldırım Beyazıt SUAM Yerel Etik 
+Kurulu„ndan 06.06.2022  tarih ve 139/20  karar numarası ile onay alınmıĢtır  
+3.3. ÇALIġMAYA KABUL VE RED KRĠTERLERĠ  
+ÇalıĢma ya, DıĢkapı Yıldırım Beyazıt Eğitim AraĢtırma Hastanes ine baĢvuran 
+ve sistemde D50 ve D51 ICD tanı kodları ve alt kırılımları ile Demir eksikliği 
+anemisi ve Talasemi tanısı iĢaretlenmiĢ hasta kan tahlilleri dahil edilmiĢtir.  Aynı 
+anda hem demir eksikliği anemisi hem talasemi tanısı almıĢ hastaların kan tahlil leri 
+dıĢlanmıĢtır.  Ayrıca toplanan demir eksikliği anemisi ve talasemi  tam kan 
+verilerinden sadece mentz er indeksine uyanlar yapay zeka veri setlerine dahil edildi.  
+3.4. ARAġTIRMA SÜREÇLERĠ  
+Etik kurul onayı alındıktan sonra Hastane Bilgi Yönetim Sistemleri ndeki 
+(HBYS) talasemi ve Demir eksikliği tanı kriterlerini karĢılayan hastaların tam kan 
+parametreleri ve tamamen normal aralıkta bulunan tam  kan parametreleri toplandı . 
+Bu verilerdeki tam kan sonuçlarının hangisinin demir eksikliği anemisi hangisinin 
+talasemi hangisinin normal tam kan sonucu  olduğu etiketlendi . 
+Bu veriler daha sonra randomize edilerek homoje n bir veri seti oluĢturuldu . 
+Daha sonra bu veri  %75e %25 Ģeklinde ikiye ayrıldı . %75 ‟lik kısmı “yapay zek a 
+eğitim seti” olarak, diğer %25‟li k kısmı “ya pay zeka sınama seti” olarak kullanıl dı. 17 OluĢturduğumuz yapay zeka modelimiz, eğitildikten sonra , eğitimde 
+kullanmadığımız diğer %25‟li k “yapay zeka sınama  seti” ile sınandı . Yapay zeka, 
+sınama setindeki tam kan sonuçlarını kendisi etiketledikten sonra yap ay zeka 
+sonuçları ile gerçek sonuçlar kıyaslandı.  Yapay zeka modelinin baĢarı oranı  Özgüllük  
+(specificity) , Duyarlılık (sensitivite) , kesinlik skoru (precision) ve F1 skoru değerleri 
+ile ortaya konuldu.  
+Tablo 4: Hata  matrisi  
+  TEST SETĠ GERÇEK 
+SONUÇLAR   
+  POZĠTĠF  NEGATĠF   
+TAHMĠN 
+SONUÇLARI  Doğru 
+Tahmin  DP YN -- 
+YanlıĢ 
+Tahmin  YP DN -- 
+  -- -- -- 
+DP: doğru pozitif   DN:doğru  negatif   YN: yalancı negatif   YP: yalancı pozitif  
+ 
+Kesinlik değeri (precision); tahmin edilen pozitif gözlemler içerisinde kaçının 
+doğru tahmin edildiğini gösterir. Yalancı pozitifliklerin az olması modelin seçiminde 
+önemli olacağından kesinlik değerinin yüksek olması istenmektedir.  
+Kesinlik değeri =DP/(DP+YP)  
+Duyarlılık (recall, sensitivite); gerçek değeri pozitif olan gözlemlerin ne 
+kadarının pozitif olarak tahmin edildiğini göstermektedir. Yalancı negatifliklerin çok 
+olduğu durumlarda duyarlılık (recall) değeri düĢük çıkmaktadır.  
+Duyarlılık (recall) değeri = DP/(DP+YN)  
+F1 skoru, kesinlik ve duyarlılık değerlerinin harmonik ortalamasın ı 
+göstermektedir. Model seçiminde doğruluk oranı yerine F1 skorunun seçilmesinin en 
+önemli sebebi eĢit olmayan gözlem sayılarına sahip veri setlerinde hatayı minimuma 
+indirmektir. Sadece yalancı pozitif ve yalancı negatifi değil, tüm hata maliyetlerini 
+içeren bir değerlendirme aracıdır.  
+F1 = 2 * kesinlik * duyarlılık / (kesinlik + duyarlılık)  18 Özgüllük (specificity), hastada pozitif sağlamda negatif çıkan bir testte 
+sağlamların ne kadarının gerçek gerçek sağlam olduğunu gösterir. Bir hastalığın 
+doğrulanması gereken durumlarda özgüllüğü yüksek olan test (yanlıĢ pozitiflik oranı 
+düĢük) tercih edilir. Sağlam insanların tamamını atlamadan sağlam olarak 
+gösterebilen bir testin özgüllüğü %100'dür . 
+Özgüllük  (specificity) = DN/(DN+YP)  
+Mentzer indeksi , demir eksikliği anemisi ve beta talasemi taĢıyıcılarını 
+ayırmak için  kullanılan yardımcı bir araçtır. MCV/RBC formülü ile hesaplanır.  
+MCV/RBC  < 13  => Talasemi taĢıyıcılığı  
+MCV/RBC  > 13  => DEA lehine yorumlanır  
+AraĢtırma ve yapay zeka testleri yapılırken Windows 7 64 B it ĠĢletim Sistemi , 
+Intel Core i7 -4702MQ CPU iĢlemci, 8 GB RAM sitem özelliklerine sahip bilgisayar 
+ve MATLAB (2020b Yazılım Sürümü) programı kullanıldı.  
+ 
+ 
+  19 4. BULGULAR  
+Yapay Sinir Ağlarının (YSA) eğitim ve test iĢlemleri için Tablo 5‟te verildiği 
+üzere 5 42 adet demir eksikliği tam kan veri seti, 552 adet talasemi tam kan veri seti 
+ve 3192 adet normal aralıktaki tam kan veri seti olmak üzere toplamda 4286 adet tam 
+kan veri seti kullanılmıĢtır.  Bu veri setleri ~% 75e ~% 25 Ģeklinde ikiye ayrılarak % 
+75‟lik kısım “YSA Eğitim Seti” olarak, diğer % 25‟lik kısım ise “YSA Test Seti” 
+olarak kullanılmıĢtır.  
+Tablo 5: YSA eğitim ve test iĢlemleri için kullanılan veri seti bilgileri  
+Veri ÇeĢidi  Eğitim  Test 
+DEA  407 135 
+Talasemi  414 138 
+Normal  2394  798 
+Toplam  3215  1071 
+Genel Toplam  4286  
+ 
+YSA‟ların olabildiğince düĢük sayıda gizli katmana sahip olması ve benzer 
+Ģekilde bu katmanların az sayıda nöron içerecek Ģekilde tasarlanması önemli 
+avantajları beraberinde getirmektedir. Bu amaçla tez çalıĢma çerçevesinde en fazl a 
+üç gizli katman içeren ve bu gizli katmanlarda farklı sayıda nöron bulunduran 
+500‟den fazla yapay sinir ağı yapısı incelenmiĢtir. Ġki gizli katmana sahip YSA 
+yapıları için gizli katmanlardaki en yüksek nöron sayısı 20 ve üç gizli katmana sahip 
+yapılar iç in ise en yüksek nöron sayısı 5 olarak alınmıĢtır.  
+Bunun yanında farklı eğitim algoritmalarının verdiği sonuçların görülebilmesi 
+ve performanslarının karĢılaĢtırılabilmesi amacıyla Levenberg -Marquardt (LM), 
+Bayesian  Regularization (BR), Broyden –Fletcher –Goldfarb –Shanno \BFGS Quasi -
+Newton (BFG), Resilient (RP), Scaled  Conjugate  Gradient (SCG), Conjugate  
+Gradient  with Powell/Beale (CGB), Conjugate  Gradient  with Fletcher -Reeves  
+(CGF), Conjugate  Gradient  Polak -Ribiére,  (CGP), One Step Secant (OSS), Gradient  
+Desc ent (GD), Gradient  Descent  with adaptive Learning rate (GDA) ve  Gradient  20 Descent  with Momentum and  Adaptive Learning rate (GDX) geri yayılım 
+algoritmaları ile ilgili YSA yapılarının eğitimleri gerçekleĢtirilmiĢtir.  
+Elde edilen sonuçların sayısal olarak karĢ ılaĢtırılabilmesi için karesel 
+ortalama hata (MSE: Mean  Squared  Error), karesel ortalama kök kata (RMSE: Root  
+Mean  Square  Error) ve karesel hataların toplamı (SSE: Sum  Squared  Error) 
+değerlerinden faydalanılmıĢtır.  
+ġekil 3‟t e en az nöron sayısına sahip olm asına karĢın en iyi sonuç veren 
+yapılardan birisi olan iki gizli katmanlı yapay sinir ağının yapısı görülmektedir.  
+ 
+ġekil 3 : Gizli katmanlarında en az nöron sayısı ile en iyi sonuç veren YSA yapısı  
+ġekil 3‟t e gösterilen YSA yapısı, iki adet gizli katmana sahip olup bu 
+katmanlarda sırasıyla 6 ve 2 adet nöron yer almaktadır. Eğitim ve test süreçlerinde en 
+iyi sonuçların alındığı eğitim algoritması olan LM ile YSA‟nın eğitimi sonrasında 
+elde edilen hata değerleri Tablo 6‟da verilmiĢtir.  
+Tablo 6:  Ġki gizli kat man içeren YSA için eğitim ve test sonrasında elde edilen 
+hatalar  
+Hata ÇeĢidi  Eğitim  Test 
+MSE  2.929267e -12 2.873496e -03 
+SSE 9.417593e -09 3.077515e+00  
+RMSE  1.711510e -06 5.360500e -02 
+21 Ġki gizli katmandan oluĢan YSA, test setinde yer alan sadece 3 tam kan 
+verisini yanlıĢ olarak tahmin etmiĢ ve test setinde yer alan 135 adet DEA tam kan 
+verisinin tamamını DEA olarak tanımlayabilmiĢtir. 138 adet talasemi tam kan 
+verisinin ise 135 adetini  talasemi olarak tanımlayabilmiĢtir. Dolayısıyla ilgili YSA, 
+ġekil 4‟t e gösterildiği üzere gerçekte talasemi olmasına karĢın DEA olarak 3 adet 
+yanlıĢ tahminde bulunmuĢtur.  
+ 
+ġekil 4 : Ġki gizli katman içeren YSA ile elde edilen sonuçlar  
+Ġlgili YSA modelinin farklı tanılara ait kan sonuçları için tanı koyabilme 
+baĢarısı Tablo  7, Tablo 8 ve Tablo 9‟da verilmiĢtir.  
+Tablo 7:  DEA için YSA tahmin değerlendirmesi  
+  TEST SETĠ GERÇEK 
+SONUÇLAR   
+  POZĠTĠF  NEGATĠF   
+DEA TAHMĠN 
+SONUÇLARI  Doğru 
+Tahmin  135 0 135 
+YanlıĢ 
+Tahmin  3 933 936 
+  138 933 1071  
+22 YSA modelinin DEA tanısı koymada sensit ivite (duyarlılık)  oranı % 100, 
+spesifite (özgüllük) oranı % 99.6795, precision (kesinlik) değeri % 97.8261 ve F1 
+skoru 0.989011‟dir.  
+Tablo 8:Talasemi için YSA tahmin değerlendirmesi  
+  TEST SETĠ GERÇEK 
+SONUÇLAR   
+  POZĠTĠF  NEGATĠF   
+TALASEMĠ 
+TAHMĠN 
+SONUÇLA RI Doğru 
+Tahmin  135 3 138 
+YanlıĢ 
+Tahmin  0 933 933 
+  135 936 1071  
+ 
+YSA modelinin talasemi tanısı koymada sensitivite  oranı % 97.8261,  spesifite 
+oranı % 100, precision değeri % 100 ve F1 skoru 0.989011‟dir.  
+Tablo 9:  Normal CBC için YSA tahmin değerlendir mesi  
+  TEST SETĠ GERÇEK 
+SONUÇLAR   
+  POZĠTĠF  NEGATĠF   
+NORMAL CBC 
+TAHMĠN 
+SONUÇLARI  Doğru 
+Tahmin  798 0 798 
+YanlıĢ 
+Tahmin  0 273 273 
+  798 273 1071  
+ 
+YSA modelinin normal tam kan tanıyabilme sensitivite  oranı % 100, spesifite 
+oranı % 100, precision değeri % 100ve F1 skoru 1‟dir.  
+Ġki gizli katman içeren YSA için farklı eğitim algoritmalarının göstermiĢ 
+olduğu performans ve bu algoritmal arın karĢılaĢtırılması Tablo 10‟da verilmiĢtir.  
+  23 Tablo 10: Ġki gizli katman içeren YSA için farklı eğitim algoritmalarının 
+performans karĢılaĢtırması  
+Algoritma  Eğitim RMSE  Test RMSE  Hatalı Tahmin  Eğitim Süresi 
+(sn) 
+LM 1.711510e -06 5.360500e -02 3 0.293  
+BR 1.421934e -06 1.151142e -01 9 1.078  
+GD 3.797706e -01 4.210155e -01 169 1.708  
+GDA  2.267354e -01 2.313557e -01 90 1.731  
+GDM  3.622394e -01 3.586624e -01 135 1.717  
+GDX  2.062902e -01 2.202744e -01 127 1.737  
+CGB  6.190806e -02 1.723793e -01 15 3.932  
+CGF  5.997995e -02 2.086399e -01 18 3.214  
+SCG  3.653931e -02 1.345786e -01 8 2.691  
+BFG  3.751305e -05 9.808872e -02 7 3.680  
+OSS 8.525535e -02 1.5074 79e-01 23 5.000  
+RP 6.412294e -02 3.042713e -01 43 1.721  
+ 
+Farklı gizli katman sayısına sahip olan ve gizli katmanlarında farklı sayıda 
+nöron içeren YSA yapıları içerisinde en optimum olanlar  Tablo 1 1‟de verilmiĢtir.  
+Tablo 1 1‟de verilen YSA yapılarının eğiti mleri LM algoritması ile 
+gerçekleĢtirilmiĢtir.  
+Tablo 1 1. LM algoritması ile eğitilen en iyi  YSA yapılarının karĢılaĢtırması  
+Gizli 
+Katman 
+Sayısı  Nöron  
+Sayısı  Eğitim  
+RMSE  Test 
+RMSE  Hatalı 
+Tahmin  Eğitim 
+Süresi (sn)  
+2 6-2 1.711510e -06 5.360500e -02 3 0.293  
+2 18-3 6.555123e -06 6.974150e -02 3 6.365  
+3 2-2-3 2.991967e -06 6.609613e -02 4 0.704  
+3 2-5-3 1.590151e -06 5.477995e -02 3 1.701  
+ 
+Daha önce sözü edildiği üzere, yapılan tez çalıĢmasında belirli limitler 
+dahilinde YSA yapıları oluĢturulmuĢ ve bu YSA yapılarını n farklı eğitim 
+algoritmaları beraberinde değerlendirilmesi gerçekleĢtirilmiĢtir. Bu limitlerin 
+değiĢtirilmesi halinde daha farklı gizli katman ve nöron sayısına sahip YSA yapıları 
+ile daha iyi sonuçların elde edilebilmesi mümkün olabilecektir.  24 TEST VERĠLE RĠ ĠLE ĠLGĠLĠ BAZI ĠSTATĠSTĠKĠ GRAFĠK VE DEĞERLER  
+ 
+ 
+ġekil 5: Test veri  setindeki MCV istatistikleri  
+ 
+ 
+ġekil 6:Test veri  setindeki MCHC istatistikleri  
+ 
+25  
+ 
+ġekil 7:Test veri  setindeki HCT istatistikleri  
+ 
+ 
+ġekil 8:Test veri  setindeki RBC istatistikleri  
+ 
+26  
+ 
+ġekil 9:Test veri  setindeki RDW istatistikleri  
+ 
+ 
+ġekil 10:Test veri  setindeki MHC istatistikleri  
+ 
+27  
+ 
+ġekil 11:Test veri  setindeki HGB istatistikleri  
+ 
+Tablo 1 2: DEA test veri setleri için istatistiki değerler  
+Örnek Tipi  Ortalama Değer  Standart Sapma  % 25 - % 75 
+Per. p 
+MCV  71.32  5.72 67.6 - 75.8 < 0.001  
+MCHC  31.09  1.35 30.5 - 31.9 < 0.001  
+HCT  31.95  3.33 30.0 - 30.4 < 0.001  
+RBC  4.49 0.42 4.2 - 4.8 < 0.001  
+RDW  18.72  2.73 17.1 - 19.4 < 0.001  
+MHC  22.21  2.34 20.8 - 23.9 < 0.001  
+HGB  9.95 1.19 9.1 - 10.9 < 0.001  
+ 
+  
+28 Tablo 1 3: Talasemi test veri setleri için istatistiki değerler  
+Örnek Tipi  Ortalama Değer  Standart Sapma  % 25 - % 75 
+Per. p 
+MCV  61.21  3.38 59.1 - 63.9 < 0.001  
+MCHC  30.89  0.86 30.3 - 31.5 < 0.001  
+HCT  34.29  2.92 32.4 - 36.3 < 0.001  
+RBC  5.61 0.46 5.3 - 5.9 < 0.001  
+RDW  18.36  2.58 16.7 - 19.3 < 0.001  
+MHC  18.92  1.21 18.2 - 19.8 < 0.001  
+HGB  10.58  0.87 10 - 11.3 < 0.001  
+ 
+Tablo 14:Normal tam kan test veri setleri için istatistiki değerler  
+Örnek Tipi  Ortalama Değer  Standart Sapma  % 25 - % 75 
+Per. p 
+MCV  86.43  4.15 83.7 - 89.5 < 0.001  
+MCHC  33.52  0.62 33.1 - 34 < 0.001  
+HCT  40.48  2.69 38.4 - 42.3 < 0.001  
+RBC  4.69 0.35 4.4 - 4.9 < 0.001  
+RDW  13.86  0.92 13.1 - 14.4 < 0.001  
+MHC  28.96  1.51 28 - 30 < 0.001  
+HGB  13.57  0.89 12.9 – 14.2 < 0.001  
+ 
+ 
+  29 5. TARTIġMA  
+Günümüzde artan nüfus karĢısında doktorların iĢ yükünün belirgin derecede 
+artması, doktorlara yardımcı karar destek sistemlerine duyulan ihtiyacı artırmıĢtır.  
+GeliĢtirilen yapay zeka tabanlı karar destek sistemleri henüz çok yeni olduğu 
+için prim er tanı aracı olarak kullanılmamaktadır. Ayrıca bazı etik kaygılar da buna 
+engel olmaktadır. Bundan dolayı yapay zeka sistemlerinin sonuçlarının gerçek bir 
+doktor tarafından kontrol edilmesi Ģimdilik daha uygun görünmektedir. Ancak yine 
+de doktorlara tanı ve tedavide, öneri ve uyarılarda bulunan sistemler ilgi görmektedir.  
+Hekimlerin ve halkın yapay zekanın geleceği hakkında fikirlerinin ve inanç 
+düzeylerinin de araĢtırıldığı çalıĢmalar da yapılmıĢtır.  
+Ġngiltere‟de birinci basamakta ki hekimlerin yapay zekay a bakıĢ açı larının 
+araĢtırıldığı bir çalıĢmada, ezici bir Ģekilde pratisyen hekimlerin yapay zekanın 
+potansiyelinin sınırlı olduğunu düĢündükleri ortaya konuldu  (54). 
+BaĢka bir çalıĢmada ise hekimlerin yapay zekanın yararlı bir araç olduğunu 
+düĢündüklerini ancak hekimlerin etik kaygılar taĢıdıklar ını göstermiĢtir  (55). 
+Tıpta yapay zeka kullanımının neden olabileceği olası etik problemlerinin 
+derlendiği yayınlar da mevcuttur  (4). 
+Sağlık alanında yapay zeka kullanımının faydalı olacağına dair pek çok somut 
+çalıĢma da yapılmıĢtır.  
+Chen ve  arkadaĢla rı tarafından yapılan bir çalıĢ mada radyoloji görüntü 
+raporlarının baĢarılı bir Ģekilde sınıflandırılabildiği gösterilmiĢtir  (56). 
+2018‟de yapılan bir çalıĢmada diyabetin komplikasyonlarının öngörülmesi ve 
+önlenmesi ile ilgili yapay zeka çalı Ģmalarının arttığını  ve insanların  yaĢam  kalitesini 
+artırdığı gösterilmiĢtir  (57). 
+2018‟de yapılan baĢka bir çalıĢmada ABD‟de ön plana çıkan 10 adet yapay 
+zeka uygulaması incelenmiĢ ve 2026‟a kadar tahmini 150 milyar dolar tasarruf 
+sağlayabileceği gösterilmiĢtir  (58). 2020‟de yapılan diğer bir çalıĢmada yine yapay 30 zeka entegrasyonu yapılan sağlık sistemlerinde daha düĢük maliyetle daha doğru ve 
+kesin sonuçlara ulaĢıldığı gösterilmiĢti r (59). 
+BaĢka bir çalıĢmada yapay zeka entegrasyonunun artırılması ile özellikle 
+birinci basamak sağlık hizmetlerinde  etkili olacağı bildirilmiĢtir  (60). 
+Sepsisli hastaların verileri ile yapılan bir çalıĢmada yapay zekanın iyi olduğu 
+konulardan biri olan hastalık prognozunu doğru tahmin becerisi, sepsisli hastaların 
+prognozunu baĢarılı bir Ģekild e tahmin etmesi ile gösterilmiĢtir  (61). 
+Ayrıca son yıllarda Google DeepMind  Health, IBM Watson Health, 
+Microsoft Project Hanover, Apple ve ProMed -mail gibi bazı uluslararası Ģirketler 
+yapay zeka uygulamalarını sağlık sektörünün kullanımına sunmaktadır  (1). 
+Tam kan param etreleri ile yapılan bir çalıĢmada, talasemi minör hastalarına 
+ait kan sonuçlarının MDS  (Myelodisplastiksendrom)  ve normal tam kan 
+sonuçlarında n ayrımında  yapay zeka kullanılmıĢtır  (62). 
+Yaptığımız literatür taramasında da görüleceği üzere yapay zeka ile çeĢitli 
+çalıĢmalar yapılmaktadır. Biz de bu çalıĢma ile en sık görülen anemilerden olan DEA 
+ve talasemi tanısında yapay zeka algoritması kullandık.  Tam kan parametreleri ile 
+yapılan benzer bir çalıĢmaya göre, hem talasemi ve DEA gibi k arıĢabilecek tam kan 
+değerlerini kullandık hem de sayı olarak daha fazla sayıda tam kan verisi 
+kullandık(4286 adet tam kan verisi kullanıldı) . 
+ÇalıĢmamızın bazı kısıtlılıkları ve geliĢtirilebilecek yönleri mevcuttur. Yapay 
+zeka eğitim setinde ve test setin de aynı anda hem DEA hem talasemi tanısı olan 
+hastaların tam kan sonuçlarını kullanmadık. Ancak tabi ki gerçekte böyle bir hastanın 
+kan tablosu ile karĢılaĢabiliriz. Ayrıca diğer anemi nedenleri ile  de kombine bir 
+Ģekilde DEA ve talasemisi olan hastalarla da karĢılaĢabiliriz. Henüz bu kadar geniĢ 
+bir eğitim seti hazırlama fırsatımız olmadığı için; bu Ģekilde borderline alanları da 
+olan veri setleri ile yapay zeka algoritmalarını test etmedik. Ancak bu çalıĢma ile 
+görüldüğü üzere yeterli veri toplandığında b aĢarılı sonuçlara ulaĢılabileceği 
+gözükmektedir.  
+ 31 6. SONUÇ  
+Bu çalıĢma  sonucuna göre, yapay zeka algoritmaları ile tam  kan verileri 
+değerlendirilerek hem düĢük maliyetli hem baĢarılı  hem de klinisyenlerin iĢ yükünü 
+azaltmaya yardımcı  tanı ve tarama araçlar ı oluĢturulabil eceği gösterilmiĢtir . DEA ve 
+talasemi ön tanısında geleneksel yöntemlere karĢılık güncel ve yeni bir alternatif 
+olabileceği kanaatine varılmıĢtır. Yapay zeka yöntemleri g elecekte yapılabilecek 
+uygulamalar açısından umut vaat etmektedir.  
+  32 7. KAYNAKLAR  
+1.  Çilhoroz Y, IĢık O. Yapay Zeka: Sağlık Hizmetlerinden Uygulamalar. Ankara Hacı Bayram Veli 
+Üniversitesi Ġktisadi ve Ġdari Bilim Fakültesi Derg. 2021;23(2):573 –88.  
+2.  Uzmanı T, Karal E, Turan M.  Hekime Tanı Koymada Yardımcı , Yapay Zekâ Destekli Hastalık 
+Assistant in Diagnosis for Doctor , Artificial Intelligence Supported Disease Detection Specialist. 
+2021;(26):100 –16.  
+3.  Russell SJ. Artificial intelligence a modern approach. Pearson Education, Inc.; 2010.  
+4.  BIOETHICS NCON. Artificial intelligence (AI) in healthcare and research. Bioeth Brief Note. 
+2018;1 –8.  
+5.  McCarthy J. What Is Artificial Intelligence Anyway. Comput Sci Dep. 2007;1 –15.  
+6.  Demirhan A, Kılıç YA, Ġnan G. Tıpta yapay zeka u ygulamaları. 2010;  
+7.  ÖCAL EE, Emrah A, ÖNSÜZ MF, ALGIN F, ÇOKYĠĞĠT FK, KILINÇ S, et al. Tıp Fakültesi 
+Öğrencilerinin Tıpta Yapay Zeka ile Ġlgili DüĢünceleri. Türk Tıp Öğrencileri AraĢtırma Derg. 
+2020;2(1):9 –16.  
+8.  Jiang F, Jiang Y, Zhi H. Artificial i ntelligence in healthcare: past, present and future. Stroke Vasc 
+Neurol 0: e000101. 2017.  
+9.  Guo J, Li B. The application of medical artificial intelligence technology in rural areas of 
+developing countries. Heal equity. 2018;2(1):174 –81.  
+10.  Öztemel E . Yapay sinir ağları. Papatya; 2012.  
+11.  Cross SS, Harrison RF, Kennedy RL. Introduction to neural networks. Lancet. 
+1995;346(8982):1075 –9.  
+12.  BABALIK A, GÜLER Ġ. BOĞAZ ENFEKSĠYONLARININ TEġHĠS VE TEDAVĠSĠNDE 
+UZMAN SĠSTEM KULLANIMI. Selcuk Univ J Eng Sci. 2007;6(2):109 –19.  
+13.  Loder J, Nicholas L. Confronting Dr Robot: creating a people -powered future for AI in health. 
+2018;  
+14.  Blanc B. Nutritional anemias. Report of a WHO scientific group. WHO Tech Rep Ser. 
+1968;405:1 –40.  
+15.  Beutler E, Waalen J. The definition of anemia: what is the lower limit of normal of the blood 
+hemoglobin concentration? Blood. 2006;107(5):1747 –50.  
+16.  Kassebaum NJ, Collaborators GBD 2013 A. The global burden of anemia. Hematol Oncol Clin 
+North Am. 2016;30(2):247 –308.  33 17.  Chrobak L. Microcytic and hypochromic anemias. Vnitr Lek. 2001;47(3):166 –74.  
+18.  Castellanos -Sinco HB, Ramos -Peñafiel CO, Santoyo -Sánchez A, Collazo -Jaloma J, Martínez -
+Murillo C, Montaño -Figueroa E, et al. Megaloblastic anaemia: Folic acid and vitami n B12 
+metabolism. Rev Médica Del Hosp Gen México. 2015;78(3):135 –43.  
+19.  Camaschella C. Iron -deficiency anemia. N Engl J Med. 2015;372(19):1832 –43.  
+20.  Subramaniam G, Girish M. Iron deficiency anemia in children. Indian J Pediatr. 2015;82(6):558 –
+64.  
+21.  Basyigit S, Sapmaz F, Uzman M, Kefeli A. Extraintestinal Manifestations in Helicobacter pylori 
+Infection –Iron Deficiency Anemia and Helicobacter pylori. Extradigestive Manifestations 
+Helicobacter Pylori Infect An Overv. 2016;113(10):5772 –6225.  
+22.  Kim Y. Effect of iron deficiency on the increased blood divalent metal concentrations. Iron Defic 
+Anemia. 2018;10.  
+23.  Lopez A, Cacoub P, Macdougall IC, Peyrin -Biroulet L. Iron deficiency anaemia. Lancet. 
+2016;387(10021):907 –16.  
+24.  Peng G, Yang W, Jing L, Zhang L, Li Y, Ye L, et al. Iron deficiency in patients with paroxysmal 
+nocturnal hemoglobinuria: a cross -sectional survey from a single institution in China. Med Sci 
+Monit Int Med J Exp Clin Res. 2018;24:7256.  
+25.  Miller JL. Iron deficiency anemia: a  common and curable disease. Cold Spring Harb Perspect 
+Med. 2013;3(7):a011866.  
+26.  Kühnel T, Wirsching K, Wohlgemuth W, Chavan A, Evert K, Vielsmeier V. Hereditary 
+hemorrhagic telangiectasia. Otolaryngol Clin North Am. 2018;51(1):237 –54.  
+27.  Greco A, R izzo MI, De Virgilio A, Gallo A, Fusconi M, Pagliuca G, et al. Goodpasture‟s 
+syndrome: a clinical update. Autoimmun Rev. 2015;14(3):246 –53.  
+28.  Fleming MD. Disorders of iron and copper metabolism, the sideroblastic anemias, and lead 
+toxicity. Orkin SH, F ish DE, Ginsbg D, Look T, Lux SE, Nathan DG Nathan Oskis Hematol 
+Oncol Infancy Childhood 8th ed Philadelphia Elsevier Saunders. 2015;  
+29.  Shaw JG, Friedman JF. Iron deficiency anemia: focus on infectious diseases in lesser developed 
+countries. Anemia. 20 11;2011.  
+30.  Gasim GI, Adam I. Malaria, schistosomiasis, and related anemia. In: Nutritional Deficiency. 
+IntechOpen; 2016.  
+31.  Winter WE, Bazydlo LAL, Harris NS. The molecular biology of human iron metabolism. Lab 
+Med. 2014;45(2):92 –102.  
+32.  Blanco -Rojo R, Vaquero MP. Iron bioavailability from food fortification to precision nutrition. A 
+review. Innov food Sci Emerg Technol. 2019;51:126 –38.  34 33.  Vázquez M, Vélez D, Devesa V, Puig S. Participation of divalent cation transporter DMT1 in the 
+uptake of i norganic mercury. Toxicology. 2015;331:119 –24.  
+34.  Kondaiah P, Aslam MF, Mashurabad PC, Sharp PA, Pullakhandam R. Zinc induces iron uptake 
+and DMT1 expression in Caco -2 cells via a PI3K/IRP2 dependent mechanism. Biochem J. 
+2019;476(11):1573 –83.  
+35.  Lam JR, Schneider JL, Quesenberry CP, Corley DA. Proton pump inhibitor and histamine -2 
+receptor antagonist use and iron deficiency. Gastroenterology. 2017;152(4):821 –9.  
+36.  Grace E, Shaw C, Whelan K, Andreyev HJN. small intestinal bacterial overgrowth –preva lence, 
+clinical features, current and developing diagnostic tests, and treatment. Aliment Pharmacol Ther. 
+2013;38(7):674 –88.  
+37.  Whitaker L, Critchley HOD. Abnormal uterine bleeding. Best Pract Res Clin Obstet Gynaecol. 
+2016;34:54 –65.  
+38.  Camaschella C . Iron deficiency. Blood, J Am Soc Hematol. 2019;133(1):30 –9.  
+39.  Ferhanoğlu B. PDQ Hematoloji (Willam F. Kern, MD). 1. Baskı Ġstanbul Med Yayıncılık. 
+2005;1 –155.  
+40.  Noyan A. YaĢam ve hekimlikte fizyoloji. Sekizinci baskı Meteksan yayınevi, Ankara. 
+1993;1993:522 –677.  
+41.  Hoffman R, Benz Jr EJ, Silberstein LE, Heslop H, Anastasi J, Weitz J. Hematology: basic 
+principles and practice. Elsevier Health Sciences; 2013.  
+42.  Origa R. β -Thalassemia. Genet Med. 2017;19(6):609 –19.  
+43.  Altay Ç. The frequency  and distribution pattern of ß -thalassemia mutations in Turkey. Turk J 
+Haematol. 2002;19(2):309 –15.  
+44.  Aksan ME. KahramanmaraĢ ili beta talasemi mutasyonlarının genetik heterojenitesi. Sağlık 
+Bilimleri Enstitüsü;  
+45.  Khera R, Singh T. Dominant [beta] -thalassemia -A rare entity! Indian J Pathol Microbiol. 
+2012;55(3):422.  
+46.  Galanello R, Origa R. Beta -thalassemia. Orphanet J Rare Dis. 2010;5(1):1 –15.  
+47.  Öner C, Gürgey A, Öner R, Balkan H, Gümrük F, Baysal E, et al. The molecular basis of Hb H 
+diseas e in Turkey. Hemoglobin. 1997;21(1):41 –51.  
+48.  Eryilmaz N. Hatay ilinde beta talasemi mutasyonları dağılımının DNA dizi analizi yöntemiyle 
+araĢtırılması. Sağlık Bilimleri Enstitüsü;  
+49.  Lanzkowsky P. Manual of pediatric hematology and oncology. Elsevie r; 2005.  
+50.  Lukens JN. The thalassemias and related disorders. Wintrobe‟s Clin Hematol. 1999;1407 –9.  35 51. Schrier SL, Angelucci E. New strategies in the treatment of the thalassemias. Annu Rev Med.
+2005;56:157 –71.
+52. Weatherall DJ, Clegg JB. The thalassaemia syndromes. John Wiley & Sons; 2008.
+53. Bain BJ. Haemoglobin and the genetics of haemoglobin synthesis. Haemoglobinopathy
+Diagnosis, 2nd ed; Blackwell Sci Oxford, UK. 2006;1 –26.
+54. Blease C, Kaptchuk TJ, Bernstein MH, Mandl KD, Halamka JD, DesRoches CM. Artificial
+intelligence and the future of primary care: exploratory qualitative study of UK general
+practitioners‟ views. J Med Internet Res. 2019;21(3):e12802.
+55. Martinho A, Kroesen M, Chorus C. A healthy debate: Exploring the views of medical doctors on
+the ethics of artificial intelligence. Artif Intell Med. 2021;121:102190.
+56. Chen MC, Ball RL, Yang L, Moradzadeh N, Chapman BE, Larson DB, et al. Deep learning to
+classify radiology free-text reports. Radiology. 2018;286(3):845 –52.
+57.Contreras I, Vehi J. Artificial intelligence for diabetes management and decision support:
+literature review. J Med Internet Res. 2018;20(5):e10775.
+58. Kalis B, Collier M, Fu R. 10 promising AI applications in health care. Harv Bus Rev. 2018;
+59. Ahmed Z, Mohamed K, Zeeshan S, Dong X. Artificial intelligence with multi-functional machine
+learning platform development for better healthcare and precision medicine. Database.
+2020;2020.
+60. Malik P, Pathania M, Rathaur VK. Overview of artificial intelligence in medicine. J Fam Med
+Prim care. 2019;8(7):2328.
+61. Larie D, An G, Cockrell C. Artificial neural networks for disease trajectory prediction in the
+context of sepsis. arXiv Prepr arXiv200714542. 2020;
+62. Barnhart ‐Magen G, Gotlib V, Marilus R, Einav Y. Differential diagnostics of thalassemia minor
+by artificial neural networks model. J Clin Lab Anal. 2013;27(6):481 –6.36 8.EKLER
+Ek-1:TEZ KONUSU ONAY FORMU 
+37 
+38 Ek-2:ETĠK KURUL ONAY FORMU  
+39 9.ÖZGEÇMĠġ
+I.Bireysel  Bilgiler
+Adı Soyadı
+Uyruğu
+Medeni Durumu
+Yabancı  Dili: Furkan KORKMAZ 
+: 
+: 
+: Ġngilizce (Orta düzeyde) 
+II.Eğitimi
+S.B.Ü. Ankara DıĢkapı Yıldırım Beyazıt Eğitim ve AraĢtırma Hastanesi, Aile
+Hekimliği Kliniği, Asistanlık Eğitimi (Ocak 2020 -Halen)
+Kırıkkale Üniversitesi Tıp Fakültesi, Tıp Eğitimi (Eylül 2011 - Temmuz 2017)
+III.Ünvanları
+Tıp Doktoru, Aile Hekimliği Asistanı
+IV.Mesleki Deneyimi
+S.B.Ü. Ankara DıĢkapı Yıldırım Beyazıt Eğitim ve AraĢtırma Hastanesi Aile
+Hekimliği Kliniği, Asistan Doktor (Ocak 2020 -Halen)
+Balıkesir Gönen Ġlçe Sağlık Müdürlüğü Pratisyen Hekim (Aralık 2018 -
+Ocak 2019)
+BALIKESĠR Gönen Devlet Hastanesi Acil Servis (Görevlendirme)
+BALIKESĠR Erdek Devlet Hastanesi Acil Servis (Görevlendirme)
+BALIKESĠR AvĢa  Adası Entegre Devlet Hastanesi Acil Servis  (Görevlendirme)
+Balıkesir Gönen 25 nolu Aile Hekimliği birimi (Ocak 2019 - Ocak 2020)
+V.Bilimsel Etkinlikleri Aldığı Burslar  Ödüller

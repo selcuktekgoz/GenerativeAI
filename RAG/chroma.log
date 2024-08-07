@@ -1,0 +1,38 @@
+[33mWARNING[0m:  [07-08-2024 08:35:32] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048576. chroma_server_nofile will not be set.
+[32mINFO[0m:     [07-08-2024 08:35:32] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [07-08-2024 08:35:32] Starting component System
+[36mDEBUG[0m:    [07-08-2024 08:35:32] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [07-08-2024 08:35:32] Starting component SqliteDB
+[36mDEBUG[0m:    [07-08-2024 08:35:32] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [07-08-2024 08:35:32] Starting component Posthog
+[36mDEBUG[0m:    [07-08-2024 08:35:32] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [07-08-2024 08:35:32] Starting component SegmentAPI
+[32mINFO[0m:     [07-08-2024 08:35:32] Started server process [[36m5506[0m]
+[32mINFO[0m:     [07-08-2024 08:35:32] Waiting for application startup.
+[32mINFO[0m:     [07-08-2024 08:35:32] Application startup complete.
+[32mINFO[0m:     [07-08-2024 08:35:32] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [07-08-2024 08:35:56] 127.0.0.1:57260 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:35:56] 127.0.0.1:57260 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:35:56] 127.0.0.1:57276 - "GET /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:35:56] 127.0.0.1:57276 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:35:57] 127.0.0.1:57276 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [07-08-2024 08:35:57] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [07-08-2024 08:35:57] 127.0.0.1:57276 - "POST /api/v1/collections/e971a532-fa3d-487c-8e83-0ff04c0ea40b/add HTTP/1.1" 201
+[32mINFO[0m:     [07-08-2024 08:35:57] 127.0.0.1:57276 - "POST /api/v1/collections/e971a532-fa3d-487c-8e83-0ff04c0ea40b/query HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:36:56] 127.0.0.1:48934 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:36:56] 127.0.0.1:48934 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:36:56] 127.0.0.1:48940 - "GET /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:36:56] 127.0.0.1:48940 - "GET /api/v1/collections/new_collection?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:36:56] 127.0.0.1:48940 - "POST /api/v1/collections/e971a532-fa3d-487c-8e83-0ff04c0ea40b/query HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37278 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37278 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37286 - "GET /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37286 - "GET /api/v1/collections/new_collection?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37286 - "POST /api/v1/collections/e971a532-fa3d-487c-8e83-0ff04c0ea40b/query HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37298 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37298 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37300 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37300 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [07-08-2024 08:38:31] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [07-08-2024 08:38:31] 127.0.0.1:37300 - "POST /api/v1/collections/4316fbd4-d1f3-44b7-8d9c-865cddb47c04/add HTTP/1.1" 201
+[32mINFO[0m:     [07-08-2024 08:38:32] 127.0.0.1:37300 - "POST /api/v1/collections/4316fbd4-d1f3-44b7-8d9c-865cddb47c04/query HTTP/1.1" 200

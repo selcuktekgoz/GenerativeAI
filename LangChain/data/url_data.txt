@@ -1,0 +1,464 @@
+
+
+
+
+
+
+
+RAG (Retrieval-Augmented Generation) Nedir? - OpenZeka Blog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Skip to content
+
+
+
+
+ 
+
+
+Ara:
+
+
+
+
+
+
+
+
+
+
+
+Toggle NavigationANA SAYFAGEN AIJETSONAIOMNIVERSEVERİ MERKEZİOYUNSAĞLIKToggle NavigationANA SAYFAGEN AIJETSONAIOMNIVERSEVERİ MERKEZİOYUNSAĞLIK
+ 
+
+RAG (Retrieval-Augmented Generation) Nedir?RAG, diğer kaynaklardan elde edilen bilgi ve verilerle üretken yapay zeka modellerinin doğruluğunu ve güvenilirliğini artırmaya yönelik bir tekniktir.Hatice Betül Kaya  tarafından yazıldı. |  
+Yayın Tarihi: Kasım 27, 2023
+
+
+
+
+
+
+Okuma 7.4 dkKategoriler: AI, GEN AIRAG, doğal dil işleme alanında bilgi çekme(retrieval) ve dil üretimi(generation) yeteneklerini birleştiren bir yapıya sahiptir ve genellikle daha derin ve bilgi odaklı cevaplar üretmek için kullanılır.
+Yapay zeka modelleri, özellikle büyük veri setleriyle beslenerek öğrenen bir derin öğrenme mimarisi olan transformer’lara dayanır. Bu transformer modelleri, dil anlayışını genellikle büyük veri setleri üzerinde eğitilerek ve transfer öğrenme yetenekleriyle kazanırlar. (Transformerler ile ilgili daha detaylı bilgi almak için “Transformer Modeli Nedir” isimli yazıya bakın.) Sonrasında çeşitli dil işleme görevlerinde (çeviri, metin sınıflandırma, soru-cevap gibi) fine-tuning denilen bir teknikle daha iyi sonuçlar elde ederler. Bu modeller, dilin işlenmesinde çok başarılı olabilirler.
+İnce ayar (fine-tuning), genellikle modelin belirli bir görevde daha iyi performans göstermesini sağlar. Ancak, sürekli değişen veya spesifik bir bağlamda tam kapsamlı bilgi gerektiren durumlarda, modelin yalnızca ince ayar ile bu bilgiyi edinmesi zor olabilir. Örneğin, anlık veya spesifik konularla ilgili derinlemesine ve tam kapsamlı bir anlayış için genellikle modelin sürekli olarak güncellenmesi, eğitilmesi veya öğrenmesi gerekebilir. Bu durumda, modelin yalnızca ince ayar yapması yeterli olmayabilir.
+Bu konuyu bir örnekle betimlemeye çalışalım:
+Bir mahkeme sürecini ele alalım. Hakimler davaları genel hukuk anlayışlarına göre dinler ve bu anlayışa göre bir karara bağlarlar. Bazen bir davanın karara bağlanması özel uzmanlık gerektirir, bu nedenle davanın sonuca bağlanması için benzer davalar araştırılır.
+Yukarıda bahsedilen örnekte olduğu gibi büyük dil modelleri tıpkı bir hakim gibi (LLM) birçok soruya yanıt verebilir. Ancak güvenilir yanıtlar verebilmek için modelin arka planda biraz araştırma yapacak bir yardımcıya ihtiyacı vardır.
+İşte yapay zekanın yardımcısı RAG diye isimlendirilen bir büyük dil modeli tekniğidir diyebiliriz. (Large Language Models nedir isimli yazımızı inceleyebilirsiniz.)
+Retrieval- Augmented Generation(RAG) Kavramı
+Retrieval-Augmented Generation(RAG) kavramını anlamak için öncelikle “Retrieval Model” ve “Generative Model” kavramının ne olduğuna bakalım.
+Retrieval Modeller: Retrieval modeller, belirli bir metin kaynağı veya veritabanı üzerinden ilgili bilgiyi almak için tasarlanmıştır. Belirli bir sorguya veya kategoriye dayalı olarak en alakalı bilgi parçalarını belirlemek için genellikle bilgi çekme veya anlamsal arama teknikleri gibi teknikleri kullanırlar. Kullanıcının sorgularını anlamak ve işlemek için kullanılır. Sorgu işleme adımından gelen sorgular, genellikle büyük bir metin koleksiyonunda (örneğin, bir veritabanı, web sayfaları, belgeler veya makaleler gibi) benzerlik skorlaması kullanılarak en uygun metinlerin bulunmasını sağlar. Bu işlem, sorgunun en iyi eşleşen metinleri döndürmesini amaçlar.
+Generative Modeller: Generative modeller ise belirli bir bilgi istemi veya bağlama dayalı olarak yeni içerik oluşturmak için tasarlanmıştır. Bu LLM’ler doğal dilin kalıplarını ve yapılarını öğrenmek için büyük miktarda eğitim verisi kullanır. Üretken modeller yaratıcı ve tutarlı metinler üretebilir, ancak olgusal doğruluk, daha spesifik bir konuya derinlemesine dalma veya belirli bir bağlama uygunluk konusunda zorluk yaşayabilirler.
+RAG modeli ise, bu sınırlamaların üstesinden gelmek için bu iki yaklaşımı birleştirmektedir. Bu çerçevede, belirli bir sorguya veya bağlama dayalı olarak bir veri tabanından veya bilgi kaynağından ilgili bilgiyi almak için retrieval tabanlı bir model kullanılır. Alınan bilgiler daha sonra generative model için girdi veya ek bağlam olarak kullanılır.
+RAG Modeli Nasıl Çalışır?
+Şimdi, bir kullanıcının üretken yapay zeka sistemine belirli bir bilgi sorgu gönderdiğini varsayalım; örneğin, “Türkiye Kadın Milli Voleybol Takımı kaç maç kazandı, takım oyuncuları kimler ve en yakın maç ne zaman?” Burdaki sorgular bir vektöre dönüştürülür ve sorunun bağlamıyla ilgili bilgileri alan vektör bilgi kaynağını sorgulamak için kullanılır. Kullanıcılar bir LLM’e bir soru sorduğunda, AI modeli sorguyu başka bir modele göndererek onu sayısal bir formata dönüştürerek makinelerin okuyabilmesini sağlar. Sorgunun sayısal versiyonuna bazen “embedding” veya “vektör” adı verilir.
+Embedded modeli daha sonra bu sayısal değerleri, mevcut bir bilgi kaynağındaki makine tarafından okunabilen bir indeksteki vektörlerle karşılaştırır. Bir eşleşme veya birden fazla eşleşme bulduğunda ilgili verileri alır, bunları insanların okuyabileceği kelimelere dönüştürür ve LLM’e geri iletir.
+Son olarak LLM, alınan kelimeleri ve sorguya verdiği kendi yanıtını kullanıcıya sunduğu nihai yanıtta birleştirir ve metin yanıtı oluşturur.
+Kaynak: https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/
+LLM’nin eğitim süreci zaman alıcı ve maliyetli olsa da, RAG modelinde yapılan güncellemeler bunun tam tersidir. Yeni veriler embedded dil modeline yüklenebilir ve sürekli vektörlere çevrilebilir. Diğer bir deyişle, üretken yapay zeka sisteminden gelen yanıtlar RAG modeline geri beslenerek performansını ve doğruluğunu artırabilir, çünkü aslında benzer bir soruyu nasıl yanıtladığını biliyor. Bu, modelin adaptasyon yeteneği sayesinde, yeni gelen verilere dayalı olarak daha iyi cevaplar üretebilmesini sağlar.
+NVIDIA ve RAG
+NVIDIA, yapay zeka (AI) geliştirme ve uygulama süreçlerinde LangChain gibi açık kaynaklı kütüphaneleri, özellikle RAG modelleriyle birlikte kullanmaktadır. LangChain, LLM’leri birbirine bağlama, farklı modelleri bir araya getirme ve bilgi tabanlarını entegre etme gibi konularda geliştiricilere yardımcı olabilecek bir kütüphane olarak değerlendirilmektedir.
+NVIDIA, bu tür kütüphaneleri, geliştiricilere AI projeleri oluşturma ve RAG modelleri gibi karmaşık yapay zeka sistemlerini daha etkili bir şekilde inşa etme konusunda desteklemek amacıyla kullanmaktadır. Özellikle, NVIDIA LaunchPad Lab gibi platformlar aracılığıyla, yapay zeka sohbet robotları ve RAG tabanlı modeller gibi uygulamaları geliştiricilere öğretmek ve deneyim kazandırmak amacıyla eğitimler sunulmaktadır.
+Bu tür girişimler, geliştiricilere RAG modeli gibi yeni ve karmaşık yapay zeka yapılarını kullanarak çeşitli projeler geliştirme ve uygulama fırsatları sunar. NVIDIA gibi büyük teknoloji şirketleri, AI ve RAG gibi alanlarda gelişmeleri teşvik etmek ve bu teknolojilerin benimsenmesini sağlamak için eğitim ve kaynaklar sunarak bu alandaki gelişimi desteklemektedir.
+Kaynak: https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/
+RAG Modelinin Tarihçesi
+Retrieval-Augmented Generation (RAG) modeli, Facebook AI Research (FAIR) araştırmacıları-şimdiki META AI– (Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, Douwe Kiela) tarafından yapılan çalışmalar sonucunda ortaya çıkmıştır.
+RAG (Retrieval-Augmented Generation), “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks” başlıklı bir makalede 2020 yılında tanıtılan bir terimdir.
+Bu modelin tarihçesi, bu teknolojinin gelişmesi ve bilgi getirme ile dil işleme arasındaki entegrasyonun ilerlemesiyle şekillenmiştir.
+Kaynak: https://paperswithcode.com/method/rag
+RAG Modelinin Avantajları
+
+RAG’ın, LLM’i eğitmek için kullanılan verilerden daha güncel olabilecek bilgilere erişimi vardır.
+RAG’ın bilgi havuzundaki veriler, büyük maliyetlere gerek olmadan sürekli olarak güncellenebilir.
+RAG’ın bilgi deposu, genelleştirilmiş bir LLM’deki verilerden daha bağlamsal olan verileri içerebilir.
+RAG’ın vektör veritabanındaki bilgilerin kaynağı belirlenebilir. Veri kaynakları bilindiği için RAG’daki hatalı bilgiler düzeltilebilir veya silinebilir.
+RAG modeli, farklı gereksinimlere ve kullanım senaryolarına uygun şekilde özelleştirilebilir. Örneğin, farklı dil modelleri, belirli konulara odaklanmış retrieval sistemleri ile kullanılabilir.
+
+Kısacası RAG, büyük dil modelinin (LLM’ler) yeniden eğitim gerektirmeden ek veri kaynaklarına erişmesine izin vererek üretken yapay zekanın kalitesini artırabilen, üretken yapay zekaya kanıtlara dayalı güncellik, bağlam ve doğruluk sağlayan nispeten yeni bir modeldir diyebiliriz. Bu teknik, gelecekte yapay zeka alanında daha derin ve bilgi odaklı çalışmaların kapısını aralayan önemli bir adımdır.
+Güncel bilgileri sizlerle paylaşmaya devam edeceğiz. Bloglarımızı takipte kalmayı unutmayın.
+Bir sonraki yazımızda görüşmek üzere!
+Kaynaklar
+
+Prompt Engineering Guide
+NVIDIA Blog
+IBM
+Oracle
+Papers With Code
+
+
+OPENZEKA HABERLERİblog2024-04-30T14:31:49+03:00Yeni NVIDIA RTX A400 ve A1000 GPU’lar ile Yapay Zeka Destekli Tasarımblog2024-03-21T01:39:44+03:00NVIDIA NIM: Yapay Zeka Modellerinin Dağıtımı için Mikro Hizmetlerblog2024-04-30T14:31:49+03:00Yeni NVIDIA RTX A400 ve A1000 GPU’lar ile Yapay Zeka Destekli Tasarımblog2024-03-21T01:39:44+03:00NVIDIA NIM: Yapay Zeka Modellerinin Dağıtımı için Mikro Hizmetlerblog2024-03-20T21:47:34+03:00İnsansı Robotlar için Yapay Zeka Platformu: NVIDIA GR00Tblog2024-04-30T14:31:49+03:00Yeni NVIDIA RTX A400 ve A1000 GPU’lar ile Yapay Zeka Destekli Tasarımblog2024-03-21T01:39:44+03:00NVIDIA NIM: Yapay Zeka Modellerinin Dağıtımı için Mikro HizmetlerAvantajlı Fiyatlardan Faydalanmak İçin Mağazamızı Ziyaret Edin
+
+
+
+
+
+
+
+
+
+Lütfen bu alanı boş bırakınAbone olmak ister misiniz?
+Hemen ilgilendiğiniz alanları seçerek bültenimizden haberdar olabilirsiniz. 
+E mail adresi *
+Kategoriler AI Veri Merkezi Sürüş Oyun Pro Grafik Otonom  Araçlar Sağlık Inception Ai Podcast
+
+
+Aboneliğinizi onaylamak için gelen kutunuzu ve spam'i kontrol edin.
+        
+ 
+
+
+
+OPENZEKA HABERLERİblog2024-04-30T14:31:49+03:00Yeni NVIDIA RTX A400 ve A1000 GPU’lar ile Yapay Zeka Destekli Tasarımblog2024-03-21T01:39:44+03:00NVIDIA NIM: Yapay Zeka Modellerinin Dağıtımı için Mikro Hizmetlerblog2024-04-30T14:31:49+03:00Yeni NVIDIA RTX A400 ve A1000 GPU’lar ile Yapay Zeka Destekli Tasarımblog2024-03-21T01:39:44+03:00NVIDIA NIM: Yapay Zeka Modellerinin Dağıtımı için Mikro Hizmetlerblog2024-03-20T21:47:34+03:00İnsansı Robotlar için Yapay Zeka Platformu: NVIDIA GR00Tblog2024-04-30T14:31:49+03:00Yeni NVIDIA RTX A400 ve A1000 GPU’lar ile Yapay Zeka Destekli Tasarımblog2024-03-21T01:39:44+03:00NVIDIA NIM: Yapay Zeka Modellerinin Dağıtımı için Mikro HizmetlerAvantajlı Fiyatlardan Faydalanmak İçin Mağazamızı Ziyaret Edin
+
+
+
+
+
+
+
+
+
+Lütfen bu alanı boş bırakınAbone olmak ister misiniz?
+Hemen ilgilendiğiniz alanları seçerek bültenimizden haberdar olabilirsiniz. 
+E mail adresi *
+Kategoriler AI Veri Merkezi Sürüş Oyun Pro Grafik Otonom  Araçlar Sağlık Inception Ai Podcast
+
+
+Aboneliğinizi onaylamak için gelen kutunuzu ve spam'i kontrol edin.
+        
+ 
+
+
+
+
+
+Yanıtı iptal etYorum
+
+
+Daha sonraki yorumlarım için bilgilerimi sakla.
+ 
+
+Δ 
+Hesaplarınızda paylaşmak ister misiniz?İlgili Yazılar
+
+
+
+
+NVIDIA, Yapay Zeka Bulut Sağlayıcıları için Yeni Referans Mimarisini Duyurdu1:46 pm|0 Yorum
+
+
+
+
+NVIDIA NIM: Yapay Zeka Modellerinin Dağıtımı için Mikro Hizmetler8:01 pm|0 Yorum
+
+
+
+
+İnsansı Robotlar için Yapay Zeka Platformu: NVIDIA GR00T7:26 pm|0 Yorum
+
+
+
+
+NVIDIA Blackwell GPU’yu Tanıttı12:44 am|0 Yorum
+
+
+
+
+NVIDIA, Yapay Zeka Bulut Sağlayıcıları için Yeni Referans Mimarisini Duyurdu1:46 pm|0 Yorum
+
+
+
+
+NVIDIA NIM: Yapay Zeka Modellerinin Dağıtımı için Mikro Hizmetler8:01 pm|0 Yorum
+
+
+
+
+İnsansı Robotlar için Yapay Zeka Platformu: NVIDIA GR00T7:26 pm|0 Yorum
+
+
+
+
+NVIDIA Blackwell GPU’yu Tanıttı12:44 am|0 Yorum
+
+
+
+
+NVIDIA, Yapay Zeka Bulut Sağlayıcıları için Yeni Referans Mimarisini Duyurdu1:46 pm|0 Yorum
+
+
+
+
+NVIDIA NIM: Yapay Zeka Modellerinin Dağıtımı için Mikro Hizmetler8:01 pm|0 Yorum
+
+
+
+
+İnsansı Robotlar için Yapay Zeka Platformu: NVIDIA GR00T7:26 pm|0 Yorum
+
+
+
+
+NVIDIA Blackwell GPU’yu Tanıttı12:44 am|0 Yorum
+
+
+
+ 
+ 
+Çözümler
+Cordatus AI
+Otonom Araç
+Akıllı Şehirler
+Bankacılık Finans
+Eğitim
+Sağlık
+Hızlı Linkler
+Open Zeka Marc
+Yapay Zeka Eğitimi
+Şirketler için Yapay Zeka Dönüşüm Rehberi
+Derin Öğrenme Nedir?
+Mağaza
+Geliştirici Kitler
+Hazır Yapay Zeka Kitleri
+Modüller
+Taşıyıcı Kartlar
+İletişim
+Open Zeka, NVIDIA Derin Öğrenme Kurumu ve NVIDIA Embedded Türkiye partneri olarak yeni nesil yapay zeka algoritmaları ve sensörleri kullanarak akıllı şehir ve otonom sistem konusunda çalışmaktadır. Özellikle uçtan uca çözüm geliştirilmesi konusunda eğitim, danışmanlık proje ortaklığı hizmetleri sunmaktadır.
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+Size daha iyi bir hizmet sunabilmek için web sitesi çerezleri ve üçüncü taraf hizmetleri kullanmaktayız. Ayarlar ve anlaşmalar için aşağıya bakınız.							Ayarlar 
+
+
+			OK		
+
+
+
+
+
+Takip Çerezleri
+Çerez, bir web sitesinin ziyaretçinin bilgisayarında depoladığı ve ziyaretçinin her dönüşünde ziyaretçinin tarayıcısının web sitesine sağladığı bir bilgi dizesidir. OpenZeka, OpenZeka'nın ziyaretçileri, OpenZeka web sitesini kullanımlarını ve web sitesi erişim tercihlerini tanımlamasına ve izlemesine yardımcı olmak için çerezleri kullanır.
+
+
+
+
+
+										Tracking Cookies								
+
+
+
+
+Üçüncü Taraf Çerezleri
+Bu web siteleri hakkınızda veri toplayabilir, çerezleri kullanabilir, ek üçüncü taraf izleme ekleyebilir ve bir hesabınız varsa ve bu web sitesine giriş yapmışsanız, gömülü içerikle olan etkileşimi izlemek de dahil olmak üzere bu gömülü içerikle olan etkileşimi izleyebilir.
+
+
+
+
+
+													YouTube										
+
+
+
+
+Gizlilik ve Kişisel Veri Politikası
+Gizliliğiniz bizim için çok önemlidir. OpenZeka'da takip ettiğimiz birkaç temel ilkemiz var:
+Gerçekten ihtiyacımız olmadıkça sizden kişisel bilgi istemiyoruz. (Görünen bir sebep olmadan sizden cinsiyetiniz veya gelir düzeyiniz gibi şeyler isteyen hizmetlere dayanamayız.)
+Kişisel bilgilerinizi yasalara uymak, ürünlerimizi geliştirmek veya haklarımızı korumak dışında kimseyle paylaşmayız.
+
+GİZLİLİK & KİŞİSEL VERİ POLİTİKAMIZI OKUYUN
+
+
+Kullanım Sözleşmesi, Şartlar ve Koşullar
+Sitemizi kullanırken size iyi bir deneyim sunmak istiyoruz. Sunmuş olduğumuz içerikler ve satış hizmetlerinden faydalanabilmeniz için bazı şartlar belirledik. Bu şartlara uygun olarak satın alma işlemlerinin nasıl gerçekleştirileceği, kişisel verilerin işlenişi, hizmet şartlarımız ve ön gördüğümüz bazı sorunlarla ilgili uyarılarımızı öğrenmek için aşağıdaki bağlantıyı ziyaret ediniz.
+
+KULLANIM SÖZLEŞMESİ, ŞARTLAR VE KOŞULLARI OKUYUN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Go to Top
+
+
+
+
+
+
