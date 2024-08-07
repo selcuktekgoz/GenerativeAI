@@ -31,7 +31,8 @@ else:
             "Bilim insanları yeni bir gen keşfetti",
             "Genom dizileme teknikleri hızla gelişiyor",
             "Kalıtsal hastalıkların genetik temelleri araştırılıyor",
-            # alakasız kontrol cümlemiz. buna yakın benzerliktekileri eleyip filtreleyelim. dil modeline bu alakasızları göndermeyelim.
+            "İzmit'te bugün hava çok güzel.",
+            # alakasız kontrol cümlesi ekle. buna yakın benzerliktekileri eleyip filtreleyelim. dil modeline bu alakasızları göndermeyelim.
         ],
         metadatas=[
             {"source": "source1"},
